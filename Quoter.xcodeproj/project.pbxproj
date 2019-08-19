@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F792309049D00612EBA /* AppDelegate.swift */; };
-		98670F7C2309049D00612EBA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F7B2309049D00612EBA /* Document.swift */; };
-		98670F7F2309049D00612EBA /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670F7D2309049D00612EBA /* Document.xib */; };
-		98670F822309049D00612EBA /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98670F802309049D00612EBA /* Document.xcdatamodeld */; };
+		98670F7C2309049D00612EBA /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F7B2309049D00612EBA /* Quote.swift */; };
+		98670F7F2309049D00612EBA /* Quote.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670F7D2309049D00612EBA /* Quote.xib */; };
 		98670F842309049E00612EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98670F832309049E00612EBA /* Assets.xcassets */; };
 		98670F872309049E00612EBA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670F852309049E00612EBA /* MainMenu.xib */; };
 		98670F932309049E00612EBA /* QuoterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F922309049E00612EBA /* QuoterTests.swift */; };
 		98670F9E2309049E00612EBA /* QuoterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F9D2309049E00612EBA /* QuoterUITests.swift */; };
+		98670FAC230A480A00612EBA /* QuoteWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FAB230A480A00612EBA /* QuoteWindowController.swift */; };
+		98670FAF230A4C0100612EBA /* QuoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FAD230A4C0100612EBA /* QuoteListViewController.swift */; };
+		98670FB0230A4C0100612EBA /* QuoteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670FAE230A4C0100612EBA /* QuoteListViewController.xib */; };
+		98670FB3230A51DB00612EBA /* QuoteItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB1230A51DB00612EBA /* QuoteItemViewController.swift */; };
+		98670FB4230A51DB00612EBA /* QuoteItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670FB2230A51DB00612EBA /* QuoteItemViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +41,8 @@
 /* Begin PBXFileReference section */
 		98670F762309049D00612EBA /* Quoter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quoter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98670F792309049D00612EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		98670F7B2309049D00612EBA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		98670F7E2309049D00612EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
-		98670F812309049D00612EBA /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+		98670F7B2309049D00612EBA /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		98670F7E2309049D00612EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Quote.xib; sourceTree = "<group>"; };
 		98670F832309049E00612EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98670F862309049E00612EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		98670F882309049E00612EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +53,11 @@
 		98670F992309049E00612EBA /* QuoterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuoterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98670F9D2309049E00612EBA /* QuoterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoterUITests.swift; sourceTree = "<group>"; };
 		98670F9F2309049E00612EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98670FAB230A480A00612EBA /* QuoteWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWindowController.swift; sourceTree = "<group>"; };
+		98670FAD230A4C0100612EBA /* QuoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListViewController.swift; sourceTree = "<group>"; };
+		98670FAE230A4C0100612EBA /* QuoteListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteListViewController.xib; sourceTree = "<group>"; };
+		98670FB1230A51DB00612EBA /* QuoteItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItemViewController.swift; sourceTree = "<group>"; };
+		98670FB2230A51DB00612EBA /* QuoteItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteItemViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				98670F792309049D00612EBA /* AppDelegate.swift */,
-				98670F7B2309049D00612EBA /* Document.swift */,
-				98670F7D2309049D00612EBA /* Document.xib */,
+				98670F7B2309049D00612EBA /* Quote.swift */,
+				98670F7D2309049D00612EBA /* Quote.xib */,
+				98670FAD230A4C0100612EBA /* QuoteListViewController.swift */,
+				98670FB1230A51DB00612EBA /* QuoteItemViewController.swift */,
+				98670FB2230A51DB00612EBA /* QuoteItemViewController.xib */,
+				98670FAE230A4C0100612EBA /* QuoteListViewController.xib */,
 				98670F832309049E00612EBA /* Assets.xcassets */,
+				98670FAB230A480A00612EBA /* QuoteWindowController.swift */,
 				98670F852309049E00612EBA /* MainMenu.xib */,
 				98670F882309049E00612EBA /* Info.plist */,
 				98670F892309049E00612EBA /* Quoter.entitlements */,
-				98670F802309049D00612EBA /* Document.xcdatamodeld */,
 			);
 			path = Quoter;
 			sourceTree = "<group>";
@@ -235,7 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				98670F842309049E00612EBA /* Assets.xcassets in Resources */,
-				98670F7F2309049D00612EBA /* Document.xib in Resources */,
+				98670FB0230A4C0100612EBA /* QuoteListViewController.xib in Resources */,
+				98670FB4230A51DB00612EBA /* QuoteItemViewController.xib in Resources */,
+				98670F7F2309049D00612EBA /* Quote.xib in Resources */,
 				98670F872309049E00612EBA /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,9 +275,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98670F822309049D00612EBA /* Document.xcdatamodeld in Sources */,
-				98670F7C2309049D00612EBA /* Document.swift in Sources */,
+				98670FAC230A480A00612EBA /* QuoteWindowController.swift in Sources */,
+				98670FAF230A4C0100612EBA /* QuoteListViewController.swift in Sources */,
+				98670F7C2309049D00612EBA /* Quote.swift in Sources */,
 				98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */,
+				98670FB3230A51DB00612EBA /* QuoteItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,12 +315,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		98670F7D2309049D00612EBA /* Document.xib */ = {
+		98670F7D2309049D00612EBA /* Quote.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				98670F7E2309049D00612EBA /* Base */,
 			);
-			name = Document.xib;
+			name = Quote.xib;
 			sourceTree = "<group>";
 		};
 		98670F852309049E00612EBA /* MainMenu.xib */ = {
@@ -587,19 +603,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		98670F802309049D00612EBA /* Document.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				98670F812309049D00612EBA /* Document.xcdatamodel */,
-			);
-			currentVersion = 98670F812309049D00612EBA /* Document.xcdatamodel */;
-			path = Document.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 98670F6E2309049D00612EBA /* Project object */;
 }
