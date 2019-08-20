@@ -16,6 +16,16 @@ class QuoteListViewController: NSViewController {
         CustomItem(name: "Orange", subtotal: 120547),
         CustomItem(name: "Banana", subtotal: 5817),
         CustomItem(name: "Test", subtotal: 96854),
+        CustomItem(name: "asdf", subtotal: 068172),
+        CustomItem(name: "Bindery", subtotal: 10000),
+        CustomItem(name: "Orange", subtotal: 120547),
+        CustomItem(name: "Banana", subtotal: 5817),
+        CustomItem(name: "Test", subtotal: 96854),
+        CustomItem(name: "asdf", subtotal: 068172),
+        CustomItem(name: "Bindery", subtotal: 10000),
+        CustomItem(name: "Orange", subtotal: 120547),
+        CustomItem(name: "Banana", subtotal: 5817),
+        CustomItem(name: "Test", subtotal: 96854),
         CustomItem(name: "asdf", subtotal: 068172)
     ]
     

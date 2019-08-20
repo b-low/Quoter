@@ -23,15 +23,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="272"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="50" rowSizeStyle="automatic" headerView="siu-FE-4ck" viewBased="YES" floatsGroupRows="NO" id="SE5-ph-gAs">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="247"/>
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="SE5-ph-gAs">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="248"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                 <tableColumns>
                                     <tableColumn editable="NO" width="397" minWidth="40" maxWidth="1000" id="LjR-tz-DAo">
-                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Item">
+                                        <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Item">
                                             <font key="font" metaFont="smallSystem"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -56,9 +56,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-FW-hqJ">
-                                                        <rect key="frame" x="324" y="16" width="61" height="19"/>
+                                                        <rect key="frame" x="328" y="16" width="57" height="19"/>
                                                         <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="$00.00" id="jIx-Mt-78V">
-                                                            <font key="font" metaFont="systemBold" size="16"/>
+                                                            <font key="font" metaFont="system" size="16"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -81,6 +81,7 @@
                             </tableView>
                         </subviews>
                         <nil key="backgroundColor"/>
+                        <edgeInsets key="contentInsets" left="0.0" right="0.0" top="24" bottom="0.0"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="BYh-tE-HLH">
                         <rect key="frame" x="1" y="255" width="238" height="16"/>
@@ -90,18 +91,49 @@
                         <rect key="frame" x="224" y="17" width="15" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <tableHeaderView key="headerView" id="siu-FE-4ck">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="25"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </tableHeaderView>
                 </scrollView>
+                <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="withinWindow" material="headerView" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-qq-sph">
+                    <rect key="frame" x="0.0" y="248" width="400" height="24"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9sS-EL-aS6">
+                            <rect key="frame" x="10" y="4" width="31" height="17"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Item" id="dce-54-mMh">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" misplaced="YES" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Yt-7G-fSy">
+                            <rect key="frame" x="367" y="3" width="24" height="18"/>
+                            <buttonCell key="cell" type="roundRect" alternateTitle="Add item" bezelStyle="roundedRect" image="NSAddTemplate" imagePosition="only" alignment="center" state="on" inset="2" id="2T5-TY-Ix4">
+                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="cellTitle"/>
+                            </buttonCell>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4Yt-7G-fSy" secondAttribute="trailing" constant="12" id="BoF-K0-ugD"/>
+                        <constraint firstAttribute="height" constant="24" id="c6O-FD-O4O"/>
+                        <constraint firstItem="9sS-EL-aS6" firstAttribute="leading" secondItem="TI9-qq-sph" secondAttribute="leading" constant="12" id="dog-ya-fg9"/>
+                        <constraint firstItem="9sS-EL-aS6" firstAttribute="centerY" secondItem="TI9-qq-sph" secondAttribute="centerY" id="sKj-zW-TCF"/>
+                        <constraint firstItem="4Yt-7G-fSy" firstAttribute="centerY" secondItem="TI9-qq-sph" secondAttribute="centerY" id="ubn-xt-LZm"/>
+                    </constraints>
+                </visualEffectView>
             </subviews>
             <constraints>
                 <constraint firstItem="zPl-sV-r6s" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="0h5-WX-RNE"/>
+                <constraint firstAttribute="trailing" secondItem="TI9-qq-sph" secondAttribute="trailing" id="Ard-z4-grd"/>
+                <constraint firstItem="TI9-qq-sph" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="O9j-Gw-dvT"/>
+                <constraint firstAttribute="trailing" secondItem="TI9-qq-sph" secondAttribute="trailing" id="T1K-4k-mHG"/>
                 <constraint firstItem="zPl-sV-r6s" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="X36-kf-SX2"/>
                 <constraint firstAttribute="trailing" secondItem="zPl-sV-r6s" secondAttribute="trailing" id="Yik-w5-Kun"/>
+                <constraint firstItem="TI9-qq-sph" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="lua-2J-Yad"/>
                 <constraint firstAttribute="bottom" secondItem="zPl-sV-r6s" secondAttribute="bottom" id="oEg-Ow-VFR"/>
+                <constraint firstItem="TI9-qq-sph" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="pK6-4c-gDn"/>
             </constraints>
         </customView>
     </objects>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>
