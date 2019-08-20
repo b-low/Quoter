@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Quote: NSDocument {
+class Quote: NSPersistentDocument {
 
     override init() {
         super.init()
@@ -19,9 +19,8 @@ class Quote: NSDocument {
         return true
     }
     
-    // TODO: Actually make the window controllers
     override func makeWindowControllers() {
-        addWindowController(QuoteWindowController(windowNibName: NSNib.Name("Quote")))
+        addWindowController(QuoteWindowController(windowNibName: NSNib.Name("Quote"), owner: self))
     }
 
 }

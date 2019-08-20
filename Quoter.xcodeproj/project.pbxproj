@@ -19,6 +19,8 @@
 		98670FB0230A4C0100612EBA /* QuoteListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670FAE230A4C0100612EBA /* QuoteListViewController.xib */; };
 		98670FB3230A51DB00612EBA /* QuoteItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB1230A51DB00612EBA /* QuoteItemViewController.swift */; };
 		98670FB4230A51DB00612EBA /* QuoteItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670FB2230A51DB00612EBA /* QuoteItemViewController.xib */; };
+		98670FB9230B91F900612EBA /* Quote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB7230B91F900612EBA /* Quote.xcdatamodeld */; };
+		98670FF9230B950000612EBA /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FF8230B950000612EBA /* QuoteItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		98670FAE230A4C0100612EBA /* QuoteListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteListViewController.xib; sourceTree = "<group>"; };
 		98670FB1230A51DB00612EBA /* QuoteItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItemViewController.swift; sourceTree = "<group>"; };
 		98670FB2230A51DB00612EBA /* QuoteItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteItemViewController.xib; sourceTree = "<group>"; };
+		98670FB8230B91F900612EBA /* Quote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quote.xcdatamodel; sourceTree = "<group>"; };
+		98670FF8230B950000612EBA /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				98670F792309049D00612EBA /* AppDelegate.swift */,
 				98670F7B2309049D00612EBA /* Quote.swift */,
 				98670F7D2309049D00612EBA /* Quote.xib */,
+				98670FF8230B950000612EBA /* QuoteItem.swift */,
 				98670FAD230A4C0100612EBA /* QuoteListViewController.swift */,
 				98670FB1230A51DB00612EBA /* QuoteItemViewController.swift */,
 				98670FB2230A51DB00612EBA /* QuoteItemViewController.xib */,
@@ -120,6 +125,7 @@
 				98670F852309049E00612EBA /* MainMenu.xib */,
 				98670F882309049E00612EBA /* Info.plist */,
 				98670F892309049E00612EBA /* Quoter.entitlements */,
+				98670FB7230B91F900612EBA /* Quote.xcdatamodeld */,
 			);
 			path = Quoter;
 			sourceTree = "<group>";
@@ -277,7 +283,9 @@
 			files = (
 				98670FAC230A480A00612EBA /* QuoteWindowController.swift in Sources */,
 				98670FAF230A4C0100612EBA /* QuoteListViewController.swift in Sources */,
+				98670FB9230B91F900612EBA /* Quote.xcdatamodeld in Sources */,
 				98670F7C2309049D00612EBA /* Quote.swift in Sources */,
+				98670FF9230B950000612EBA /* QuoteItem.swift in Sources */,
 				98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */,
 				98670FB3230A51DB00612EBA /* QuoteItemViewController.swift in Sources */,
 			);
@@ -603,6 +611,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		98670FB7230B91F900612EBA /* Quote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				98670FB8230B91F900612EBA /* Quote.xcdatamodel */,
+			);
+			currentVersion = 98670FB8230B91F900612EBA /* Quote.xcdatamodel */;
+			path = Quote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 98670F6E2309049D00612EBA /* Project object */;
 }
