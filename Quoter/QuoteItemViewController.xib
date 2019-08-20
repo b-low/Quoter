@@ -26,10 +26,8 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Uov-tB-Arj" secondAttribute="trailing" constant="118" id="88W-fi-9lK"/>
-                <constraint firstAttribute="bottom" secondItem="Uov-tB-Arj" secondAttribute="bottom" constant="125" id="HnQ-Qp-LcY"/>
-                <constraint firstItem="Uov-tB-Arj" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="118" id="eXQ-rn-xpE"/>
-                <constraint firstItem="Uov-tB-Arj" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="125" id="uA0-Q0-Sf8"/>
+                <constraint firstItem="Uov-tB-Arj" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="S9K-Lp-fz4"/>
+                <constraint firstItem="Uov-tB-Arj" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="h6w-IO-wp9"/>
             </constraints>
         </customView>
     </objects>
