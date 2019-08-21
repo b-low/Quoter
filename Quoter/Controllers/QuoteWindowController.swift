@@ -15,7 +15,7 @@ class QuoteWindowController: NSWindowController {
     
         let splitVC = NSSplitViewController()
         let quoteListVC = QuoteListViewController()
-        let quoteItemVC = QuoteItemViewController()
+        let quoteItemVC = BasicItemViewController()
         
         splitVC.addSplitViewItem(NSSplitViewItem(contentListWithViewController: quoteListVC))
         splitVC.addSplitViewItem(NSSplitViewItem(viewController: quoteItemVC))

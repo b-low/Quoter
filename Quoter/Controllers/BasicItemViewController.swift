@@ -1,5 +1,5 @@
 //
-//  QuoteItemViewController.swift
+//  BasicItemViewController.swift
 //  Quoter
 //
 //  Created by Brandon Low on 8/18/19.
@@ -8,11 +8,10 @@
 
 import Cocoa
 
-class QuoteItemViewController: NSViewController {
-
+class BasicItemViewController: NSViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
 }
