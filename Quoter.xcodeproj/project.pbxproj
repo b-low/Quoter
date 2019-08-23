@@ -22,6 +22,10 @@
 		98670FB9230B91F900612EBA /* Quote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB7230B91F900612EBA /* Quote.xcdatamodeld */; };
 		98670FF9230B950000612EBA /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FF8230B950000612EBA /* QuoteItem.swift */; };
 		98670FFD230BE3AB00612EBA /* QuoteItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FFC230BE3AB00612EBA /* QuoteItemCellView.swift */; };
+		98671003230FF2C000612EBA /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98671001230FF2C000612EBA /* PreferencesWindowController.swift */; };
+		98671004230FF2C000612EBA /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98671002230FF2C000612EBA /* PreferencesWindowController.xib */; };
+		98671007230FF37800612EBA /* ItemPresetPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */; };
+		98671008230FF37800612EBA /* ItemPresetPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		98670FB8230B91F900612EBA /* Quote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quote.xcdatamodel; sourceTree = "<group>"; };
 		98670FF8230B950000612EBA /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
 		98670FFC230BE3AB00612EBA /* QuoteItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItemCellView.swift; sourceTree = "<group>"; };
+		98671001230FF2C000612EBA /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		98671002230FF2C000612EBA /* PreferencesWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
+		98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPresetPreferencesViewController.swift; sourceTree = "<group>"; };
+		98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemPresetPreferencesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,8 @@
 				98670FAB230A480A00612EBA /* QuoteWindowController.swift */,
 				98670FAD230A4C0100612EBA /* QuoteListViewController.swift */,
 				98670FB1230A51DB00612EBA /* BasicItemViewController.swift */,
+				98671001230FF2C000612EBA /* PreferencesWindowController.swift */,
+				98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +180,8 @@
 				98670F7D2309049D00612EBA /* Quote.xib */,
 				98670FAE230A4C0100612EBA /* QuoteListViewController.xib */,
 				98670FB2230A51DB00612EBA /* BasicItemViewController.xib */,
+				98671002230FF2C000612EBA /* PreferencesWindowController.xib */,
+				98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */,
 				98670FFC230BE3AB00612EBA /* QuoteItemCellView.swift */,
 			);
 			path = Views;
@@ -279,9 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98671004230FF2C000612EBA /* PreferencesWindowController.xib in Resources */,
 				98670F842309049E00612EBA /* Assets.xcassets in Resources */,
 				98670FB0230A4C0100612EBA /* QuoteListViewController.xib in Resources */,
 				98670FB4230A51DB00612EBA /* BasicItemViewController.xib in Resources */,
+				98671008230FF37800612EBA /* ItemPresetPreferencesViewController.xib in Resources */,
 				98670F7F2309049D00612EBA /* Quote.xib in Resources */,
 				98670F872309049E00612EBA /* MainMenu.xib in Resources */,
 			);
@@ -311,9 +325,11 @@
 				98670FAC230A480A00612EBA /* QuoteWindowController.swift in Sources */,
 				98670FAF230A4C0100612EBA /* QuoteListViewController.swift in Sources */,
 				98670FFD230BE3AB00612EBA /* QuoteItemCellView.swift in Sources */,
+				98671007230FF37800612EBA /* ItemPresetPreferencesViewController.swift in Sources */,
 				98670FB9230B91F900612EBA /* Quote.xcdatamodeld in Sources */,
 				98670F7C2309049D00612EBA /* Quote.swift in Sources */,
 				98670FF9230B950000612EBA /* QuoteItem.swift in Sources */,
+				98671003230FF2C000612EBA /* PreferencesWindowController.swift in Sources */,
 				98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */,
 				98670FB3230A51DB00612EBA /* BasicItemViewController.swift in Sources */,
 			);
