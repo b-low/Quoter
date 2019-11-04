@@ -1,4 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BasicItem" representedClassName="BasicItem" parentEntity="PaperItem" syncable="YES">
+        <attribute name="pricePerThousand" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="BookletsItem" representedClassName="BookletsItem" parentEntity="PaperItem" syncable="YES">
+        <attribute name="pagesPerBook" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="pricePerThousandCoverPaper" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pricePerThousandTextPaper" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="CustomItem" representedClassName="CustomItem" parentEntity="QuoteItem" syncable="YES"/>
+    <entity name="PadsItem" representedClassName="PadsItem" parentEntity="PaperItem" syncable="YES">
+        <attribute name="pricePerThousand" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="sheetsPerPad" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="PaperItem" representedClassName="PaperItem" isAbstract="YES" parentEntity="QuoteItem" syncable="YES">
+        <attribute name="bleed" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="extra" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pieceHeight" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="pieceWidth" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="quantity" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="QuoteItem" representedClassName="QuoteItem" isAbstract="YES" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="subtotal" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="WideFormatItem" representedClassName="WideFormatItem" parentEntity="QuoteItem" syncable="YES">
+        <attribute name="pieceHeight" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="pieceWidth" attributeType="Double" usesScalarValueType="YES"/>
+        <attribute name="pricePerSquareFoot" attributeType="Integer 32" usesScalarValueType="YES"/>
+        <attribute name="quantity" attributeType="Integer 32" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="BasicItem" positionX="-18" positionY="27" width="128" height="58"/>
+        <element name="BookletsItem" positionX="18" positionY="63" width="128" height="88"/>
+        <element name="CustomItem" positionX="-54" positionY="-9" width="128" height="43"/>
+        <element name="PadsItem" positionX="0" positionY="45" width="128" height="73"/>
+        <element name="PaperItem" positionX="-36" positionY="9" width="128" height="118"/>
+        <element name="QuoteItem" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="WideFormatItem" positionX="36" positionY="81" width="128" height="103"/>
+    </elements>
 </model>
