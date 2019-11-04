@@ -12,7 +12,7 @@ import CoreData
 
 extension WideFormatItem {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<WideFormatItem> {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<WideFormatItem> {
         return NSFetchRequest<WideFormatItem>(entityName: "WideFormatItem")
     }
 

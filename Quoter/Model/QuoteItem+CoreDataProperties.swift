@@ -12,7 +12,7 @@ import CoreData
 
 extension QuoteItem {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<QuoteItem> {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<QuoteItem> {
         return NSFetchRequest<QuoteItem>(entityName: "QuoteItem")
     }
 

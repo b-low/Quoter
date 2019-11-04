@@ -12,7 +12,7 @@ import CoreData
 
 extension PadsItem {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<PadsItem> {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<PadsItem> {
         return NSFetchRequest<PadsItem>(entityName: "PadsItem")
     }
 

@@ -16,44 +16,38 @@ class QuoteListViewController: NSViewController {
         return DB.default.persistentContainer.viewContext
     }
     
+    lazy var fetchedResultsController: NSFetchedResultsController<QuoteItem> = {
+        let fetchRequest = QuoteItem.createFetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        // Create Fetched Results Controller
+        let fetchedResultsController = NSFetchedResultsController<QuoteItem>(fetchRequest: fetchRequest, managedObjectContext: self.context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        // Configure Fetched Results Controller
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
+    
     @IBOutlet weak var tableView: NSTableView!
-//    var items: [QuoteItem] = [
-//        CustomItem(name: "Bindery", subtotal: 10000),
-//        CustomItem(name: "Orange", subtotal: 120547),
-//        CustomItem(name: "Banana", subtotal: 5817),
-//        CustomItem(name: "Test", subtotal: 96854),
-//        CustomItem(name: "asdf", subtotal: 068172),
-//        CustomItem(name: "Bindery", subtotal: 10000),
-//        CustomItem(name: "Orange", subtotal: 120547),
-//        CustomItem(name: "Banana", subtotal: 5817),
-//        CustomItem(name: "Test", subtotal: 96854),
-//        CustomItem(name: "asdf", subtotal: 068172),
-//        CustomItem(name: "Bindery", subtotal: 10000),
-//        CustomItem(name: "Orange", subtotal: 120547),
-//        CustomItem(name: "Banana", subtotal: 5817),
-//        CustomItem(name: "Test", subtotal: 96854),
-//        CustomItem(name: "asdf", subtotal: 068172)
-//    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createDummyData();
+        createDummyData()
         
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.target = self
+        do {
+            try self.fetchedResultsController.performFetch()
+        } catch {
+            fatalError("Error on loading table view")
+        }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.target = self
     }
     
     func createDummyData() {
         print("BP -1")
-        //let og = NSEntityDescription.insertNewObject(forEntityName: "QuoteItem", into: context) as! QuoteItem
-        let og = quoteItems.newObject() as AnyObject
-        og.setValue("the og", forKey: "name")
-        og.setValue(100000, forKey: "subtotal")
-        print("BP 0.0")
-        
-        
-        quoteItems.addObject(og as Any)
         
         let test = NSEntityDescription.insertNewObject(forEntityName: "CustomItem", into: context) as! CustomItem
         test.name = "Bindery"
@@ -74,13 +68,6 @@ class QuoteListViewController: NSViewController {
         let test5 = NSEntityDescription.insertNewObject(forEntityName: "CustomItem", into: context) as! CustomItem
         test5.name = "asdf"
         test5.subtotal = 068172;
-
-
-        quoteItems.addObject(test);
-        quoteItems.addObject(test2);
-        quoteItems.addObject(test3);
-        quoteItems.addObject(test4);
-        quoteItems.addObject(test5);
         
         
         print("BP 1")
@@ -92,8 +79,8 @@ class QuoteListViewController: NSViewController {
         
         print("BP 2")
         
-        let fetchRequest: NSFetchRequest<CustomItem> = CustomItem.fetchRequest();
-        let items = try! DB.default.persistentContainer.viewContext.fetch(fetchRequest)
+        let fetchRequest: NSFetchRequest<CustomItem> = CustomItem.createFetchRequest()
+        let items = try! context.fetch(fetchRequest)
         items.forEach {
             print("\($0.name): \($0.subtotal)")
         }
@@ -103,37 +90,72 @@ class QuoteListViewController: NSViewController {
     
 }
 
-//extension QuoteListViewController: NSTableViewDataSource {
-//
-//    func numberOfRows(in tableView: NSTableView) -> Int {
-//        return items.count
-//    }
-//
-//    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-//        return nil
-//        return items[row]
-//    }
-//
-//}
-//
-//extension QuoteListViewController: NSTableViewDelegate {
-//
-//    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-//
-//        if row >= items.count {
-//            return nil
-//        }
-//
-//        let item = items[row]
-//
-//        if let cell = tableView.makeView(withIdentifier: QuoteItemCellView.identifier, owner: nil) as? QuoteItemCellView {
-//            cell.textField?.stringValue = item.name
-//            cell.subtotalField.stringValue = item.subtotalDisplay
-//            return cell
-//        }
-//        print("Requested item2 \(item.name)")
-//
-//        return nil
-//    }
-//
-//}
+extension QuoteListViewController: NSTableViewDataSource {
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return fetchedResultsController.fetchedObjects?.count ?? 0
+    }
+
+}
+
+extension QuoteListViewController: NSTableViewDelegate {
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let cell = tableView.makeView(withIdentifier: QuoteItemCellView.identifier, owner: nil) as? QuoteItemCellView else {
+            fatalError("Unexpected error on cell creation")
+        }
+        
+        let item = fetchedResultsController.fetchedObjects![row]
+        cell.textField?.stringValue = item.name!
+        cell.subtotalField.stringValue = "\(item.subtotal)"
+        
+        return cell
+    }
+
+}
+
+// Credit: https://samwize.com/2018/11/16/guide-to-nsfetchedresultscontroller-with-nstableview-macos/
+extension QuoteListViewController: NSFetchedResultsControllerDelegate {
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+            case .insert:
+                if let newIndexPath = newIndexPath {
+                    tableView.insertRows(at: [newIndexPath.item], withAnimation: .effectFade)
+                }
+            case .delete:
+                if let indexPath = indexPath {
+                    tableView.removeRows(at: [indexPath.item], withAnimation: .effectFade)
+                }
+            case .update:
+                if let indexPath = indexPath {
+                    let row = indexPath.item
+                    for column in 0..<tableView.numberOfColumns {
+                        if let cell = tableView.view(atColumn: column, row: row, makeIfNecessary: true) as? QuoteItemCellView {
+                            let item = fetchedResultsController.fetchedObjects![row]
+                            cell.textField?.stringValue = item.name!
+                            cell.subtotalField.stringValue = "\(item.subtotal)"
+                        }
+                    }
+                    // tableView.reloadData(forRowIndexes: IndexSet(arrayLiteral: indexPath.item), columnIndexes: IndexSet(integer: 0))
+                }
+            case .move:
+                if let indexPath = indexPath, let newIndexPath = newIndexPath {
+                    tableView.removeRows(at: [indexPath.item], withAnimation: .effectFade)
+                    tableView.insertRows(at: [newIndexPath.item], withAnimation: .effectFade)
+                }
+            @unknown default:
+                fatalError("Unsupported operation")
+        }
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+        tableView.reloadData()
+    }
+    
+}

@@ -8,18 +8,12 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="QuoteListViewController" customModule="Quoter" customModuleProvider="target">
             <connections>
-                <outlet property="quoteItems" destination="Mcw-EV-PUr" id="1NI-d7-jD5"/>
                 <outlet property="tableView" destination="SE5-ph-gAs" id="mEB-V5-n3z"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <arrayController mode="entity" entityName="QuoteItem" editable="NO" automaticallyPreparesContent="YES" id="Mcw-EV-PUr">
-            <connections>
-                <binding destination="-2" name="managedObjectContext" keyPath="self.context" id="eat-Jo-GEa"/>
-            </connections>
-        </arrayController>
         <customView wantsLayer="YES" id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="400" height="271"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -61,16 +55,6 @@
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
-                                                        <connections>
-                                                            <binding destination="aX9-y3-Xj4" name="value" keyPath="objectValue.name" id="r53-7z-INx">
-                                                                <dictionary key="options">
-                                                                    <string key="NSMultipleValuesPlaceholder">neko</string>
-                                                                    <string key="NSNoSelectionPlaceholder">badno</string>
-                                                                    <string key="NSNotApplicablePlaceholder">eatit</string>
-                                                                    <string key="NSNullPlaceholder">1test2</string>
-                                                                </dictionary>
-                                                            </binding>
-                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-FW-hqJ">
                                                         <rect key="frame" x="328" y="16" width="57" height="19"/>
@@ -79,20 +63,13 @@
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
-                                                        <connections>
-                                                            <binding destination="aX9-y3-Xj4" name="value" keyPath="objectValue.name" id="nlT-Ww-bqr">
-                                                                <dictionary key="options">
-                                                                    <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                                </dictionary>
-                                                            </binding>
-                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="gpO-FW-hqJ" firstAttribute="centerY" secondItem="aX9-y3-Xj4" secondAttribute="centerY" id="894-8D-DyF"/>
-                                                    <constraint firstItem="caW-Pj-L4a" firstAttribute="leading" secondItem="aX9-y3-Xj4" secondAttribute="leading" constant="12" id="aA2-gz-uLA"/>
-                                                    <constraint firstAttribute="trailing" secondItem="gpO-FW-hqJ" secondAttribute="trailing" constant="14" id="isD-hd-ewA"/>
-                                                    <constraint firstItem="caW-Pj-L4a" firstAttribute="centerY" secondItem="aX9-y3-Xj4" secondAttribute="centerY" id="jnJ-GD-m94"/>
+                                                    <constraint firstItem="caW-Pj-L4a" firstAttribute="leading" secondItem="aX9-y3-Xj4" secondAttribute="leading" constant="12" id="2Hd-yl-nhF"/>
+                                                    <constraint firstItem="gpO-FW-hqJ" firstAttribute="centerY" secondItem="aX9-y3-Xj4" secondAttribute="centerY" id="2tZ-Dd-vVu"/>
+                                                    <constraint firstAttribute="trailing" secondItem="gpO-FW-hqJ" secondAttribute="trailing" constant="14" id="cn7-lt-pyK"/>
+                                                    <constraint firstItem="caW-Pj-L4a" firstAttribute="centerY" secondItem="aX9-y3-Xj4" secondAttribute="centerY" id="yMS-V0-gZI"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="subtotalField" destination="gpO-FW-hqJ" id="hHj-zo-Rwc"/>
@@ -102,16 +79,13 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
-                                <connections>
-                                    <binding destination="Mcw-EV-PUr" name="content" keyPath="arrangedObjects" id="dhZ-V0-VRW"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <nil key="backgroundColor"/>
                         <edgeInsets key="contentInsets" left="0.0" right="0.0" top="24" bottom="0.0"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="BYh-tE-HLH">
-                        <rect key="frame" x="1" y="255" width="238" height="16"/>
+                        <rect key="frame" x="0.0" y="255" width="400" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="das-XA-kej">
