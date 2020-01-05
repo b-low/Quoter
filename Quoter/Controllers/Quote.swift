@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Quote: NSPersistentDocument {
+class Quote: NSDocument {
 
     override init() {
         super.init()

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		981CF8D823C02A1600F95D2A /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CF8D723C02A1600F95D2A /* QuoteItem.swift */; };
 		98631F50236F815500F330E3 /* QuoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FAD230A4C0100612EBA /* QuoteListViewController.swift */; };
 		98631F7C236F899300F330E3 /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98631F7B236F899200F330E3 /* DB.swift */; };
 		98631FEE236F959500F330E3 /* CustomItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98631FDC236F939A00F330E3 /* CustomItem+CoreDataClass.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		981CF8D723C02A1600F95D2A /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
 		98631F7B236F899200F330E3 /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
 		98631FD2236F939800F330E3 /* BookletsItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BookletsItem+CoreDataClass.swift"; path = "/Users/fox/Desktop/Best Printing/Quoter/Quoter/Quoter/Model/BookletsItem+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		98631FD3236F939800F330E3 /* PadsItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PadsItem+CoreDataProperties.swift"; path = "/Users/fox/Desktop/Best Printing/Quoter/Quoter/Quoter/Model/PadsItem+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				98631FDC236F939A00F330E3 /* CustomItem+CoreDataClass.swift */,
+				981CF8D723C02A1600F95D2A /* QuoteItem.swift */,
 				98631FD5236F939800F330E3 /* CustomItem+CoreDataProperties.swift */,
 				98631FDB236F939900F330E3 /* QuoteItem+CoreDataClass.swift */,
 				98631FD8236F939900F330E3 /* QuoteItem+CoreDataProperties.swift */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98631FEE236F959500F330E3 /* CustomItem+CoreDataClass.swift in Sources */,
+				981CF8D823C02A1600F95D2A /* QuoteItem.swift in Sources */,
 				98631FEF236F959500F330E3 /* CustomItem+CoreDataProperties.swift in Sources */,
 				98631FF0236F959500F330E3 /* QuoteItem+CoreDataClass.swift in Sources */,
 				98631FF1236F959500F330E3 /* QuoteItem+CoreDataProperties.swift in Sources */,
