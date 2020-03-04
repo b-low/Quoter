@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		981CF8D823C02A1600F95D2A /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CF8D723C02A1600F95D2A /* QuoteItem.swift */; };
 		98494AEF240F49B5006BDD84 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98494AEE240F49B5006BDD84 /* QuoteData.swift */; };
+		98494AF2240F8999006BDD84 /* Prefrerences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98494AF1240F8999006BDD84 /* Prefrerences.storyboard */; };
+		98494AF4240F8F98006BDD84 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98494AF3240F8F98006BDD84 /* PreferencesViewController.swift */; };
+		98494AF6240F9016006BDD84 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98494AF5240F9016006BDD84 /* PreferencesWindowController.swift */; };
 		98631F50236F815500F330E3 /* QuoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FAD230A4C0100612EBA /* QuoteListViewController.swift */; };
 		98631FFC236F959500F330E3 /* Quote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB7230B91F900612EBA /* Quote.xcdatamodeld */; };
 		98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F792309049D00612EBA /* AppDelegate.swift */; };
@@ -21,8 +24,6 @@
 		98670FB3230A51DB00612EBA /* BasicItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB1230A51DB00612EBA /* BasicItemViewController.swift */; };
 		98670FB4230A51DB00612EBA /* BasicItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98670FB2230A51DB00612EBA /* BasicItemViewController.xib */; };
 		98670FFD230BE3AB00612EBA /* QuoteItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FFC230BE3AB00612EBA /* QuoteItemCellView.swift */; };
-		98671003230FF2C000612EBA /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98671001230FF2C000612EBA /* PreferencesWindowController.swift */; };
-		98671004230FF2C000612EBA /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98671002230FF2C000612EBA /* PreferencesWindowController.xib */; };
 		98671007230FF37800612EBA /* ItemPresetPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */; };
 		98671008230FF37800612EBA /* ItemPresetPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */; };
 		9867100B2310A36600612EBA /* QuoteExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986710092310A36600612EBA /* QuoteExportViewController.swift */; };
@@ -49,6 +50,9 @@
 /* Begin PBXFileReference section */
 		981CF8D723C02A1600F95D2A /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
 		98494AEE240F49B5006BDD84 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteData.swift; path = Quoter/Model/QuoteData.swift; sourceTree = SOURCE_ROOT; };
+		98494AF1240F8999006BDD84 /* Prefrerences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prefrerences.storyboard; sourceTree = "<group>"; };
+		98494AF3240F8F98006BDD84 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		98494AF5240F9016006BDD84 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		98670F762309049D00612EBA /* Quoter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quoter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98670F792309049D00612EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98670F7B2309049D00612EBA /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
@@ -66,8 +70,6 @@
 		98670FB2230A51DB00612EBA /* BasicItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicItemViewController.xib; sourceTree = "<group>"; };
 		98670FB8230B91F900612EBA /* Quote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quote.xcdatamodel; sourceTree = "<group>"; };
 		98670FFC230BE3AB00612EBA /* QuoteItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItemCellView.swift; sourceTree = "<group>"; };
-		98671001230FF2C000612EBA /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
-		98671002230FF2C000612EBA /* PreferencesWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 		98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPresetPreferencesViewController.swift; sourceTree = "<group>"; };
 		98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemPresetPreferencesViewController.xib; sourceTree = "<group>"; };
 		986710092310A36600612EBA /* QuoteExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteExportViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98494AF0240F896D006BDD84 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				98494AF1240F8999006BDD84 /* Prefrerences.storyboard */,
+				98494AF3240F8F98006BDD84 /* PreferencesViewController.swift */,
+				98494AF5240F9016006BDD84 /* PreferencesWindowController.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
 		98670F6D2309049D00612EBA = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +132,7 @@
 		98670F782309049D00612EBA /* Quoter */ = {
 			isa = PBXGroup;
 			children = (
+				98494AF0240F896D006BDD84 /* Preferences */,
 				98671000230CB2E300612EBA /* Views */,
 				98670FFF230CB2AA00612EBA /* Controllers */,
 				98670FFE230CB27F00612EBA /* Model */,
@@ -148,7 +161,6 @@
 				986710092310A36600612EBA /* QuoteExportViewController.swift */,
 				98670FAD230A4C0100612EBA /* QuoteListViewController.swift */,
 				98670FB1230A51DB00612EBA /* BasicItemViewController.swift */,
-				98671001230FF2C000612EBA /* PreferencesWindowController.swift */,
 				98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */,
 				98494AEE240F49B5006BDD84 /* QuoteData.swift */,
 			);
@@ -163,7 +175,6 @@
 				98670FAE230A4C0100612EBA /* QuoteListViewController.xib */,
 				9867100A2310A36600612EBA /* QuoteExportViewController.xib */,
 				98670FB2230A51DB00612EBA /* BasicItemViewController.xib */,
-				98671002230FF2C000612EBA /* PreferencesWindowController.xib */,
 				98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */,
 				98670FFC230BE3AB00612EBA /* QuoteItemCellView.swift */,
 			);
@@ -274,12 +285,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98671004230FF2C000612EBA /* PreferencesWindowController.xib in Resources */,
 				98670F842309049E00612EBA /* Assets.xcassets in Resources */,
 				98670FB0230A4C0100612EBA /* QuoteListViewController.xib in Resources */,
 				98670FB4230A51DB00612EBA /* BasicItemViewController.xib in Resources */,
 				98671008230FF37800612EBA /* ItemPresetPreferencesViewController.xib in Resources */,
 				9867100C2310A36600612EBA /* QuoteExportViewController.xib in Resources */,
+				98494AF2240F8999006BDD84 /* Prefrerences.storyboard in Resources */,
 				98670F7F2309049D00612EBA /* Quote.xib in Resources */,
 				98670F872309049E00612EBA /* MainMenu.xib in Resources */,
 			);
@@ -310,10 +321,11 @@
 				98631FFC236F959500F330E3 /* Quote.xcdatamodeld in Sources */,
 				98670FAC230A480A00612EBA /* QuoteWindowController.swift in Sources */,
 				98670FFD230BE3AB00612EBA /* QuoteItemCellView.swift in Sources */,
+				98494AF6240F9016006BDD84 /* PreferencesWindowController.swift in Sources */,
 				98671007230FF37800612EBA /* ItemPresetPreferencesViewController.swift in Sources */,
 				98670F7C2309049D00612EBA /* Quote.swift in Sources */,
 				98494AEF240F49B5006BDD84 /* QuoteData.swift in Sources */,
-				98671003230FF2C000612EBA /* PreferencesWindowController.swift in Sources */,
+				98494AF4240F8F98006BDD84 /* PreferencesViewController.swift in Sources */,
 				98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */,
 				9867100B2310A36600612EBA /* QuoteExportViewController.swift in Sources */,
 				98631F50236F815500F330E3 /* QuoteListViewController.swift in Sources */,
