@@ -250,11 +250,13 @@ class CustomItem: QuoteItem {
 enum QuoteItemWrapper: Decodable {
     case paper(PaperItem)
     case wideFormat(WideFormatItem)
+    case custom(CustomItem)
     
     var unwrapped: QuoteItem {
         switch self {
         case .paper(let item): return item
         case .wideFormat(let item): return item
+        case .custom(let item): return item
         }
     }
     
@@ -272,6 +274,9 @@ enum QuoteItemWrapper: Decodable {
             break
         case "wide_format":
             self = .wideFormat(try WideFormatItem(from: decoder))
+            break
+        case "custom":
+            self = .custom(try CustomItem(from: decoder))
             break
         default:
             throw DecodingError.dataCorruptedError(forKey: .itemType, in: container, debugDescription: "Unhandled quote item type: \(itemType)")

@@ -17,6 +17,11 @@ class QuoteData: NSObject, Codable {
         case quoteItems = "quote_items"
     }
     
+    override init() {
+        quoteItems = []
+        super.init()
+    }
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -27,6 +32,12 @@ class QuoteData: NSObject, Codable {
             quoteItems.append(wrapper.unwrapped)
         }
         self.quoteItems = quoteItems
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(quoteItems, forKey: .quoteItems)
     }
     
 }

@@ -27,11 +27,11 @@ class QuoteListViewController: NSViewController {
     }
     
     func createDummyData() {
-        items.append(CustomItem(name: "Bindery", subtotal: 100000, quantity: 1))
-        items.append(CustomItem(name: "Orange", subtotal: 120547, quantity: 4))
-        items.append(CustomItem(name: "Banana", subtotal: 5817, quantity: 1))
-        items.append(CustomItem(name: "Test", subtotal: 96854, quantity: 2))
-        items.append(CustomItem(name: "asdf", subtotal: 068172, quantity: 5))
+        items.append(CustomItem(itemType: "custom", name: "Bindery", subtotal: 100000, quantity: 1))
+        items.append(CustomItem(itemType: "custom", name: "Orange", subtotal: 120547, quantity: 4))
+        items.append(CustomItem(itemType: "custom", name: "Banana", subtotal: 5817, quantity: 1))
+        items.append(CustomItem(itemType: "custom", name: "Test", subtotal: 96854, quantity: 2))
+        items.append(CustomItem(itemType: "custom", name: "asdf", subtotal: 068172, quantity: 5))
         
         for item in arrayController.arrangedObjects as! [QuoteItem] {
             print("\(item.name): \(item.subtotal)")

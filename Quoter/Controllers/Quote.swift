@@ -27,7 +27,7 @@ class Quote: NSDocument {
     }
     
     override func data(ofType typeName: String) throws -> Data {
-        // TODO: Write data
+        return try! JSONEncoder().encode(quoteData)
     }
     
     override func makeWindowControllers() {
