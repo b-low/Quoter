@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="QuoteListViewController" customModule="Quoter" customModuleProvider="target">
             <connections>
+                <outlet property="arrayController" destination="gPK-P5-sF9" id="F9G-70-EGv"/>
                 <outlet property="tableView" destination="SE5-ph-gAs" id="mEB-V5-n3z"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -33,7 +34,7 @@
                                 <tableColumns>
                                     <tableColumn editable="NO" width="397" minWidth="40" maxWidth="1000" id="LjR-tz-DAo">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Item">
-                                            <font key="font" metaFont="label" size="11"/>
+                                            <font key="font" metaFont="menu" size="11"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -55,6 +56,9 @@
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="aX9-y3-Xj4" name="value" keyPath="objectValue.name" id="kyq-eW-aLK"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-FW-hqJ">
                                                         <rect key="frame" x="328" y="16" width="57" height="19"/>
@@ -63,6 +67,9 @@
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="aX9-y3-Xj4" name="value" keyPath="objectValue.subtotal" id="EAk-vy-9c5"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
@@ -79,6 +86,9 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
+                                <connections>
+                                    <binding destination="gPK-P5-sF9" name="content" keyPath="arrangedObjects" id="dRt-A3-EME"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <nil key="backgroundColor"/>
@@ -239,7 +249,7 @@ DQ
                     <rect key="frame" x="143" y="178" width="93" height="11"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Long-time customer" id="RMy-Jo-aXB">
-                        <font key="font" metaFont="label" size="9"/>
+                        <font key="font" metaFont="menu" size="9"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -275,7 +285,7 @@ DQ
                     <rect key="frame" x="143" y="139" width="43" height="11"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Rush job" id="OqW-Iz-qXa">
-                        <font key="font" metaFont="label" size="9"/>
+                        <font key="font" metaFont="menu" size="9"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -327,6 +337,12 @@ DQ
             </subviews>
             <point key="canvasLocation" x="604.5" y="307"/>
         </customView>
+        <arrayController objectClassName="Quoter.QuoteItem" id="gPK-P5-sF9">
+            <connections>
+                <binding destination="-2" name="contentArray" keyPath="self.items" id="ZX4-Ji-irT"/>
+            </connections>
+        </arrayController>
+        <userDefaultsController representsSharedInstance="YES" id="wrc-An-LVt"/>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>

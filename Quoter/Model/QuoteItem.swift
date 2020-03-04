@@ -8,15 +8,21 @@
 
 import Foundation
 
-class QuoteItem: Codable {
-    var name: String
-    var subtotal: Int
-    var quantity: Int
+class QuoteItem: NSObject, Codable {
+    @objc var name: String
+    @objc var subtotal: Int
+    @objc var quantity: Int
     
     private enum CodingKeys : String, CodingKey {
         case name
         case subtotal
         case quantity
+    }
+    
+    init(name: String, subtotal: Int, quantity: Int) {
+        self.name = name
+        self.subtotal = subtotal
+        self.quantity = quantity
     }
     
     required init(from decoder: Decoder) throws {
@@ -52,6 +58,14 @@ class PaperItem: QuoteItem {
         case pieceWidth = "piece_width"
     }
     
+    init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double) {
+        self.bleed = bleed
+        self.extra = extra
+        self.pieceHeight = pieceHeight
+        self.pieceWidth = pieceWidth
+        super.init(name: name, subtotal: subtotal, quantity: quantity)
+    }
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -81,6 +95,11 @@ class BasicItem: PaperItem {
         case pricePerThousand = "price_per_thousand"
     }
     
+    init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double, pricePerThousand: Int) {
+        self.pricePerThousand = pricePerThousand
+        super.init(name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
+    }
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -104,6 +123,12 @@ class PadsItem: PaperItem {
     private enum CodingKeys : String, CodingKey {
         case pricePerThousand = "price_per_thousand"
         case sheetsPerPad = "sheets_per_pad"
+    }
+    
+    init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double, pricePerThousand: Int, sheetsPerPad: Int) {
+        self.pricePerThousand = pricePerThousand
+        self.sheetsPerPad = sheetsPerPad
+        super.init(name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
     }
     
     required init(from decoder: Decoder) throws {
@@ -135,6 +160,13 @@ class BookletsItem: PaperItem {
         case pricePerThousandTextPaper = "price_per_thousand_text_paper"
     }
     
+    init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double, pagesPerBook: Int, pricePerThousandCoverPaper: Int, pricePerThousandTextPaper: Int) {
+        self.pagesPerBook = pagesPerBook
+        self.pricePerThousandCoverPaper = pricePerThousandCoverPaper
+        self.pricePerThousandTextPaper = pricePerThousandTextPaper
+        super.init(name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
+    }
+    
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -158,21 +190,28 @@ class BookletsItem: PaperItem {
 
 
 class WideFormatItem: QuoteItem {
-    var pieceWidth: Double
     var pieceHeight: Double
+    var pieceWidth: Double
     var pricePerSquareFoot: Int
     
     private enum CodingKeys : String, CodingKey {
-        case pieceWidth = "piece_width"
         case pieceHeight = "piece_height"
+        case pieceWidth = "piece_width"
         case pricePerSquareFoot = "price_per_square_foot"
+    }
+    
+    init(name: String, subtotal: Int, quantity: Int, pieceHeight: Double, pieceWidth: Double, pricePerSquareFoot: Int) {
+        self.pieceHeight = pieceHeight
+        self.pieceWidth = pieceWidth
+        self.pricePerSquareFoot = pricePerSquareFoot
+        super.init(name: name, subtotal: subtotal, quantity: quantity)
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        self.pieceWidth = try container.decode(Int.self, forKey: .pieceWidth)
-        self.pieceHeight = try container.decode(Int.self, forKey: .pieceHeight)
+        self.pieceWidth = try container.decode(Double.self, forKey: .pieceWidth)
+        self.pieceHeight = try container.decode(Double.self, forKey: .pieceHeight)
         self.pricePerSquareFoot = try container.decode(Int.self, forKey: .pricePerSquareFoot)
         
         try super.init(from: decoder)
