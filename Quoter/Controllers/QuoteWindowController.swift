@@ -17,10 +17,15 @@ class QuoteWindowController: NSWindowController {
         let quoteListVC = QuoteListViewController()
         let quoteItemVC = BasicItemViewController()
         
+        splitVC.representedObject = representedObject
+        quoteListVC.representedObject = representedObject
+        quoteItemVC.representedObject = representedObject
+        
         splitVC.addSplitViewItem(NSSplitViewItem(contentListWithViewController: quoteListVC))
         splitVC.addSplitViewItem(NSSplitViewItem(viewController: quoteItemVC))
         
-        splitVC.representedObject = representedObject
+        print("Before window init")
+        
         self.init(window: NSWindow(contentViewController: splitVC))
         
         self.contentVC = splitVC

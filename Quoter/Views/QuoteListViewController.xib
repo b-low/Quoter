@@ -86,9 +86,6 @@
                                         </prototypeCellViews>
                                     </tableColumn>
                                 </tableColumns>
-                                <connections>
-                                    <binding destination="gPK-P5-sF9" name="content" keyPath="arrangedObjects" id="dRt-A3-EME"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <nil key="backgroundColor"/>
@@ -337,11 +334,7 @@ DQ
             </subviews>
             <point key="canvasLocation" x="604.5" y="307"/>
         </customView>
-        <arrayController objectClassName="Quoter.QuoteItem" id="gPK-P5-sF9">
-            <connections>
-                <binding destination="-2" name="contentArray" keyPath="representedObject.quoteItems  " id="K1B-Wg-Mg3"/>
-            </connections>
-        </arrayController>
+        <arrayController objectClassName="Quoter.QuoteItem" id="gPK-P5-sF9"/>
         <userDefaultsController representsSharedInstance="YES" id="wrc-An-LVt"/>
     </objects>
     <resources>

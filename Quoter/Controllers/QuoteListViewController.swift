@@ -18,12 +18,9 @@ class QuoteListViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        createDummyData()
-        
-        
-//        tableView.delegate = self
-//        tableView.dataSource = self
-//        tableView.target = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.target = self
         
 //        print("QLVC")
 //        for item in arrayController.arrangedObjects as! [QuoteItem] {
@@ -51,72 +48,72 @@ class QuoteListViewController: NSViewController {
     
 }
 
-//extension QuoteListViewController: NSTableViewDataSource {
-//
-//    func numberOfRows(in tableView: NSTableView) -> Int {
-//        return (quoteItems.arrangedObjects as! [QuoteItem]).count
-//    }
-//
-//}
-//
-//extension QuoteListViewController: NSTableViewDelegate {
-//
-//    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-//        guard let cell = tableView.makeView(withIdentifier: QuoteItemCellView.identifier, owner: nil) as? QuoteItemCellView else {
-//            fatalError("Unexpected error on cell creation")
-//        }
-//
-//        let item = quoteItems.arrangedObjects[row]
-//        cell.textField?.stringValue = item.name
-//        cell.subtotalField.stringValue = "\(item.subtotal)"
-//
-//        return cell
-//    }
-//
-//}
-//
+extension QuoteListViewController: NSTableViewDataSource {
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return (representedObject as! QuoteData).quoteItems.count
+    }
+
+}
+
+extension QuoteListViewController: NSTableViewDelegate {
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let cell = tableView.makeView(withIdentifier: QuoteItemCellView.identifier, owner: nil) as? QuoteItemCellView else {
+            fatalError("Unexpected error on cell creation")
+        }
+        
+        let item = (representedObject as! QuoteData).quoteItems[row]
+        cell.textField?.stringValue = item.name
+        cell.subtotalField.stringValue = "\(item.subtotal)"
+
+        return cell
+    }
+
+}
+
 //// Credit: https://samwize.com/2018/11/16/guide-to-nsfetchedresultscontroller-with-nstableview-macos/
-//extension QuoteListViewController: NSFetchedResultsControllerDelegate {
-//
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-//        switch type {
-//            case .insert:
-//                if let newIndexPath = newIndexPath {
-//                    tableView.insertRows(at: [newIndexPath.item], withAnimation: .effectFade)
-//                }
-//            case .delete:
-//                if let indexPath = indexPath {
-//                    tableView.removeRows(at: [indexPath.item], withAnimation: .effectFade)
-//                }
-//            case .update:
-//                if let indexPath = indexPath {
-//                    let row = indexPath.item
-//                    for column in 0..<tableView.numberOfColumns {
-//                        if let cell = tableView.view(atColumn: column, row: row, makeIfNecessary: true) as? QuoteItemCellView {
-//                            let item = items[row]
-//                            cell.textField?.stringValue = item.name
-//                            cell.subtotalField.stringValue = "\(item.subtotal)"
-//                        }
-//                    }
-//                    // tableView.reloadData(forRowIndexes: IndexSet(arrayLiteral: indexPath.item), columnIndexes: IndexSet(integer: 0))
-//                }
-//            case .move:
-//                if let indexPath = indexPath, let newIndexPath = newIndexPath {
-//                    tableView.removeRows(at: [indexPath.item], withAnimation: .effectFade)
-//                    tableView.insertRows(at: [newIndexPath.item], withAnimation: .effectFade)
-//                }
-//            @unknown default:
-//                fatalError("Unsupported operation")
-//        }
-//    }
-//
-//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        tableView.beginUpdates()
-//    }
-//
-//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        tableView.endUpdates()
-//        tableView.reloadData()
-//    }
-//
-//}
+extension QuoteListViewController: NSFetchedResultsControllerDelegate {
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+            case .insert:
+                if let newIndexPath = newIndexPath {
+                    tableView.insertRows(at: [newIndexPath.item], withAnimation: .effectFade)
+                }
+            case .delete:
+                if let indexPath = indexPath {
+                    tableView.removeRows(at: [indexPath.item], withAnimation: .effectFade)
+                }
+            case .update:
+                if let indexPath = indexPath {
+                    let row = indexPath.item
+                    for column in 0..<tableView.numberOfColumns {
+                        if let cell = tableView.view(atColumn: column, row: row, makeIfNecessary: true) as? QuoteItemCellView {
+                            let item = (representedObject as! QuoteData).quoteItems[row]
+                            cell.textField?.stringValue = item.name
+                            cell.subtotalField.stringValue = "\(item.subtotal)"
+                        }
+                    }
+                    // tableView.reloadData(forRowIndexes: IndexSet(arrayLiteral: indexPath.item), columnIndexes: IndexSet(integer: 0))
+                }
+            case .move:
+                if let indexPath = indexPath, let newIndexPath = newIndexPath {
+                    tableView.removeRows(at: [indexPath.item], withAnimation: .effectFade)
+                    tableView.insertRows(at: [newIndexPath.item], withAnimation: .effectFade)
+                }
+            @unknown default:
+                fatalError("Unsupported operation")
+        }
+    }
+
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+        tableView.reloadData()
+    }
+
+}
