@@ -9,10 +9,13 @@
 import Cocoa
 
 class Quote: NSDocument {
+    
+    var quoteData: QuoteData
 
     override init() {
+        quoteData = QuoteData()
+        
         super.init()
-        // Add your subclass-specific initialization here.
     }
 
     override class var autosavesInPlace: Bool {
@@ -20,7 +23,7 @@ class Quote: NSDocument {
     }
     
     override func read(from data: Data, ofType typeName: String) throws {
-        // TODO: Read data
+        quoteData = try! JSONDecoder().decode(QuoteData.self, from: data)
     }
     
     override func data(ofType typeName: String) throws -> Data {
@@ -28,7 +31,13 @@ class Quote: NSDocument {
     }
     
     override func makeWindowControllers() {
-        addWindowController(QuoteWindowController(windowNibName: NSNib.Name("Quote"), owner: self))
+        let windowController = QuoteWindowController(windowNibName: NSNib.Name("Quote"), owner: self)
+        addWindowController(windowController)
+        
+        if let contentVC = windowController.contentViewController {
+            contentVC.representedObject = quoteData
+            // contentViewController = contentVC
+        }
     }
     
     override func windowControllerDidLoadNib(_ windowController: NSWindowController) {

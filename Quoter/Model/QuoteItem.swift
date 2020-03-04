@@ -9,17 +9,20 @@
 import Foundation
 
 class QuoteItem: NSObject, Codable {
+    @objc var itemType: String
     @objc var name: String
     @objc var subtotal: Int
     @objc var quantity: Int
     
     private enum CodingKeys : String, CodingKey {
+        case itemType = "item_type"
         case name
         case subtotal
         case quantity
     }
     
-    init(name: String, subtotal: Int, quantity: Int) {
+    init(itemType: String, name: String, subtotal: Int, quantity: Int) {
+        self.itemType = itemType
         self.name = name
         self.subtotal = subtotal
         self.quantity = quantity
@@ -28,6 +31,7 @@ class QuoteItem: NSObject, Codable {
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
+        self.itemType = try container.decode(String.self, forKey: .itemType)
         self.name = try container.decode(String.self, forKey: .name)
         self.subtotal = try container.decode(Int.self, forKey: .subtotal)
         self.quantity = try container.decode(Int.self, forKey: .quantity)
@@ -36,6 +40,7 @@ class QuoteItem: NSObject, Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         
+        try container.encode(itemType, forKey: .itemType)
         try container.encode(name, forKey: .name)
         try container.encode(subtotal, forKey: .subtotal)
         try container.encode(quantity, forKey: .quantity)
@@ -46,29 +51,33 @@ class QuoteItem: NSObject, Codable {
 
 
 class PaperItem: QuoteItem {
+    var paperItemType: String
     var bleed: Double
     var extra: Double
     var pieceHeight: Double
     var pieceWidth: Double
     
     private enum CodingKeys : String, CodingKey {
+        case paperItemType = "paper_item_type"
         case bleed
         case extra
         case pieceHeight = "piece_height"
         case pieceWidth = "piece_width"
     }
     
-    init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double) {
+    init(paperItemType: String, name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double) {
+        self.paperItemType = paperItemType
         self.bleed = bleed
         self.extra = extra
         self.pieceHeight = pieceHeight
         self.pieceWidth = pieceWidth
-        super.init(name: name, subtotal: subtotal, quantity: quantity)
+        super.init(itemType: "paper", name: name, subtotal: subtotal, quantity: quantity)
     }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
+        self.paperItemType = try container.decode(String.self, forKey: .paperItemType)
         self.bleed = try container.decode(Double.self, forKey: .bleed)
         self.extra = try container.decode(Double.self, forKey: .extra)
         self.pieceHeight = try container.decode(Double.self, forKey: .pieceHeight)
@@ -81,6 +90,7 @@ class PaperItem: QuoteItem {
         try super.encode(to: encoder)
         var container = encoder.container(keyedBy: CodingKeys.self)
         
+        try container.encode(paperItemType, forKey: .paperItemType)
         try container.encode(bleed, forKey: .bleed)
         try container.encode(extra, forKey: .extra)
         try container.encode(pieceHeight, forKey: .pieceHeight)
@@ -97,7 +107,7 @@ class BasicItem: PaperItem {
     
     init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double, pricePerThousand: Int) {
         self.pricePerThousand = pricePerThousand
-        super.init(name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
+        super.init(paperItemType: "basic", name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
     }
     
     required init(from decoder: Decoder) throws {
@@ -116,7 +126,7 @@ class BasicItem: PaperItem {
     }
 }
 
-class PadsItem: PaperItem {
+class PadItem: PaperItem {
     var pricePerThousand: Int
     var sheetsPerPad: Int
     
@@ -128,7 +138,7 @@ class PadsItem: PaperItem {
     init(name: String, subtotal: Int, quantity: Int, bleed: Double, extra: Double, pieceHeight: Double, pieceWidth: Double, pricePerThousand: Int, sheetsPerPad: Int) {
         self.pricePerThousand = pricePerThousand
         self.sheetsPerPad = sheetsPerPad
-        super.init(name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
+        super.init(paperItemType: "pad", name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
     }
     
     required init(from decoder: Decoder) throws {
@@ -149,7 +159,7 @@ class PadsItem: PaperItem {
     }
 }
 
-class BookletsItem: PaperItem {
+class BookletItem: PaperItem {
     var pagesPerBook: Int
     var pricePerThousandCoverPaper: Int
     var pricePerThousandTextPaper: Int
@@ -164,7 +174,7 @@ class BookletsItem: PaperItem {
         self.pagesPerBook = pagesPerBook
         self.pricePerThousandCoverPaper = pricePerThousandCoverPaper
         self.pricePerThousandTextPaper = pricePerThousandTextPaper
-        super.init(name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
+        super.init(paperItemType: "booklet", name: name, subtotal: subtotal, quantity: quantity, bleed: bleed, extra: extra, pieceHeight: pieceHeight, pieceWidth: pieceWidth)
     }
     
     required init(from decoder: Decoder) throws {
@@ -204,7 +214,7 @@ class WideFormatItem: QuoteItem {
         self.pieceHeight = pieceHeight
         self.pieceWidth = pieceWidth
         self.pricePerSquareFoot = pricePerSquareFoot
-        super.init(name: name, subtotal: subtotal, quantity: quantity)
+        super.init(itemType: "wide_format", name: name, subtotal: subtotal, quantity: quantity)
     }
     
     required init(from decoder: Decoder) throws {
@@ -230,5 +240,41 @@ class WideFormatItem: QuoteItem {
 
 
 class CustomItem: QuoteItem {
+    // TODO: type = custom
+}
+
+
+
+
+// Inspired by https://github.com/nsscreencast/305-codable-and-polymorphism/blob/master/Codable%20and%20Polymorphism.playground/Contents.swift
+enum QuoteItemWrapper: Decodable {
+    case paper(PaperItem)
+    case wideFormat(WideFormatItem)
     
+    var unwrapped: QuoteItem {
+        switch self {
+        case .paper(let item): return item
+        case .wideFormat(let item): return item
+        }
+    }
+    
+    private enum CodingKeys : String, CodingKey {
+        case itemType
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let itemType = try container.decode(String.self, forKey: .itemType)
+        switch itemType {
+        case "paper":
+            self = .paper(try PaperItem(from: decoder))
+            break
+        case "wide_format":
+            self = .wideFormat(try WideFormatItem(from: decoder))
+            break
+        default:
+            throw DecodingError.dataCorruptedError(forKey: .itemType, in: container, debugDescription: "Unhandled quote item type: \(itemType)")
+        }
+    }
 }

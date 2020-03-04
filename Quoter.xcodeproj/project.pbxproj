@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		981CF8D823C02A1600F95D2A /* QuoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981CF8D723C02A1600F95D2A /* QuoteItem.swift */; };
+		98494AEF240F49B5006BDD84 /* QuoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98494AEE240F49B5006BDD84 /* QuoteData.swift */; };
 		98631F50236F815500F330E3 /* QuoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670FAD230A4C0100612EBA /* QuoteListViewController.swift */; };
 		98631FFC236F959500F330E3 /* Quote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98670FB7230B91F900612EBA /* Quote.xcdatamodeld */; };
 		98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670F792309049D00612EBA /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		981CF8D723C02A1600F95D2A /* QuoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteItem.swift; sourceTree = "<group>"; };
+		98494AEE240F49B5006BDD84 /* QuoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteData.swift; path = Quoter/Model/QuoteData.swift; sourceTree = SOURCE_ROOT; };
 		98670F762309049D00612EBA /* Quoter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quoter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98670F792309049D00612EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98670F7B2309049D00612EBA /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				98670FB1230A51DB00612EBA /* BasicItemViewController.swift */,
 				98671001230FF2C000612EBA /* PreferencesWindowController.swift */,
 				98671005230FF37800612EBA /* ItemPresetPreferencesViewController.swift */,
+				98494AEE240F49B5006BDD84 /* QuoteData.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				98670FFD230BE3AB00612EBA /* QuoteItemCellView.swift in Sources */,
 				98671007230FF37800612EBA /* ItemPresetPreferencesViewController.swift in Sources */,
 				98670F7C2309049D00612EBA /* Quote.swift in Sources */,
+				98494AEF240F49B5006BDD84 /* QuoteData.swift in Sources */,
 				98671003230FF2C000612EBA /* PreferencesWindowController.swift in Sources */,
 				98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */,
 				9867100B2310A36600612EBA /* QuoteExportViewController.swift in Sources */,
