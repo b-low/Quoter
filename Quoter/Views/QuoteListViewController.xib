@@ -34,7 +34,7 @@
                                 <tableColumns>
                                     <tableColumn editable="NO" width="397" minWidth="40" maxWidth="1000" id="LjR-tz-DAo">
                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Item">
-                                            <font key="font" metaFont="menu" size="11"/>
+                                            <font key="font" metaFont="label" size="11"/>
                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                         </tableHeaderCell>
@@ -339,7 +339,7 @@ DQ
         </customView>
         <arrayController objectClassName="Quoter.QuoteItem" id="gPK-P5-sF9">
             <connections>
-                <binding destination="-2" name="contentArray" keyPath="self.items" id="ZX4-Ji-irT"/>
+                <binding destination="-2" name="contentArray" keyPath="representedObject.quoteItems  " id="K1B-Wg-Mg3"/>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="wrc-An-LVt"/>

@@ -11,32 +11,43 @@ import Cocoa
 class QuoteListViewController: NSViewController {
     
     @IBOutlet var arrayController: NSArrayController!
-    @objc dynamic var items = [QuoteItem]()
+    // @objc dynamic var items = [QuoteItem]()
     
     @IBOutlet weak var tableView: NSTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createDummyData()
+//        createDummyData()
         
         
 //        tableView.delegate = self
 //        tableView.dataSource = self
 //        tableView.target = self
+        
+//        print("QLVC")
+//        for item in arrayController.arrangedObjects as! [QuoteItem] {
+//            print("\(item.name): \(item.subtotal)")
+//        }
+//        print("QLVC2")
+//        for item in (representedObject as! QuoteData).quoteItems {
+//            print("\(item.name): \(item.subtotal)")
+//        }
+//        arrayController.fetch
+//        print("QLVC3")
     }
     
-    func createDummyData() {
-        items.append(CustomItem(itemType: "custom", name: "Bindery", subtotal: 100000, quantity: 1))
-        items.append(CustomItem(itemType: "custom", name: "Orange", subtotal: 120547, quantity: 4))
-        items.append(CustomItem(itemType: "custom", name: "Banana", subtotal: 5817, quantity: 1))
-        items.append(CustomItem(itemType: "custom", name: "Test", subtotal: 96854, quantity: 2))
-        items.append(CustomItem(itemType: "custom", name: "asdf", subtotal: 068172, quantity: 5))
-        
-        for item in arrayController.arrangedObjects as! [QuoteItem] {
-            print("\(item.name): \(item.subtotal)")
-        }
-    }
+//    func createDummyData() {
+//        items.append(CustomItem(itemType: "custom", name: "Bindery", subtotal: 100000, quantity: 1))
+//        items.append(CustomItem(itemType: "custom", name: "Orange", subtotal: 120547, quantity: 4))
+//        items.append(CustomItem(itemType: "custom", name: "Banana", subtotal: 5817, quantity: 1))
+//        items.append(CustomItem(itemType: "custom", name: "Test", subtotal: 96854, quantity: 2))
+//        items.append(CustomItem(itemType: "custom", name: "asdf", subtotal: 068172, quantity: 5))
+//
+//        for item in arrayController.arrangedObjects as! [QuoteItem] {
+//            print("\(item.name): \(item.subtotal)")
+//        }
+//    }
     
 }
 

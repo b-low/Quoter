@@ -31,13 +31,18 @@ class Quote: NSDocument {
     }
     
     override func makeWindowControllers() {
-        let windowController = QuoteWindowController(windowNibName: NSNib.Name("Quote"), owner: self)
-        addWindowController(windowController)
+        let windowController = QuoteWindowController(representedObject: quoteData)
+
         
-        if let contentVC = windowController.contentViewController {
-            contentVC.representedObject = quoteData
-            // contentViewController = contentVC
+        
+        
+        // DEBUG
+        Swift.print("mwc")
+        for item in quoteData.quoteItems {
+            Swift.print("\(item.name): \(item.subtotal)")
         }
+        
+        addWindowController(windowController)
     }
     
     override func windowControllerDidLoadNib(_ windowController: NSWindowController) {

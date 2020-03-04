@@ -10,7 +10,7 @@ import Foundation
 
 class QuoteData: NSObject, Codable {
     
-    @objc dynamic let quoteItems: [QuoteItem]
+    @objc dynamic var quoteItems: [QuoteItem]
     // TODO: Add customer name, date, etc.
     
     private enum CodingKeys : String, CodingKey {
@@ -19,6 +19,16 @@ class QuoteData: NSObject, Codable {
     
     override init() {
         quoteItems = []
+        
+        // DEBUG
+        quoteItems.append(CustomItem(itemType: "custom", name: "Bindery", subtotal: 100000, quantity: 1))
+        quoteItems.append(CustomItem(itemType: "custom", name: "Orange", subtotal: 120547, quantity: 4))
+        quoteItems.append(CustomItem(itemType: "custom", name: "Banana", subtotal: 5817, quantity: 1))
+        quoteItems.append(CustomItem(itemType: "custom", name: "Test", subtotal: 96854, quantity: 2))
+        quoteItems.append(CustomItem(itemType: "custom", name: "asdf", subtotal: 068172, quantity: 5))
+        
+        print("Reached quote init")
+        
         super.init()
     }
     

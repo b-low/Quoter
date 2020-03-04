@@ -9,10 +9,10 @@
 import Cocoa
 
 class QuoteWindowController: NSWindowController {
-
-    override func windowDidLoad() {
-        super.windowDidLoad()
     
+    var contentVC: NSSplitViewController?
+    
+    convenience init(representedObject: QuoteData) {
         let splitVC = NSSplitViewController()
         let quoteListVC = QuoteListViewController()
         let quoteItemVC = BasicItemViewController()
@@ -20,7 +20,23 @@ class QuoteWindowController: NSWindowController {
         splitVC.addSplitViewItem(NSSplitViewItem(contentListWithViewController: quoteListVC))
         splitVC.addSplitViewItem(NSSplitViewItem(viewController: quoteItemVC))
         
-        window?.contentViewController = splitVC
+        splitVC.representedObject = representedObject
+        self.init(window: NSWindow(contentViewController: splitVC))
+        
+        self.contentVC = splitVC
     }
+
+//    override func windowDidLoad() {
+//        super.windowDidLoad()
+//
+//        let splitVC = NSSplitViewController()
+//        let quoteListVC = QuoteListViewController()
+//        let quoteItemVC = BasicItemViewController()
+//
+//        splitVC.addSplitViewItem(NSSplitViewItem(contentListWithViewController: quoteListVC))
+//        splitVC.addSplitViewItem(NSSplitViewItem(viewController: quoteItemVC))
+//
+//        window?.contentViewController = splitVC
+//    }
 
 }
