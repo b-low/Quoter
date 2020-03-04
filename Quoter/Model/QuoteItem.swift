@@ -261,7 +261,7 @@ enum QuoteItemWrapper: Decodable {
     }
     
     private enum CodingKeys : String, CodingKey {
-        case itemType
+        case itemType = "item_type"
     }
     
     init(from decoder: Decoder) throws {
