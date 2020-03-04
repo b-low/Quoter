@@ -19,8 +19,20 @@ class Quote: NSDocument {
         return true
     }
     
+    override func read(from data: Data, ofType typeName: String) throws {
+        // TODO: Read data
+    }
+    
+    override func data(ofType typeName: String) throws -> Data {
+        // TODO: Write data
+    }
+    
     override func makeWindowControllers() {
         addWindowController(QuoteWindowController(windowNibName: NSNib.Name("Quote"), owner: self))
+    }
+    
+    override func windowControllerDidLoadNib(_ windowController: NSWindowController) {
+        // TODO: Populate view elements with data
     }
 
 }
