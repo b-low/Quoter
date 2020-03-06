@@ -13,7 +13,7 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
     
-        window?.setFrame(NSMakeRect(window?.frame.origin.x ?? 0, window?.frame.origin.y ?? 0, 730, 500), display: false)
+        window?.setFrame(NSMakeRect(window?.frame.origin.x ?? 0, window?.frame.origin.y ?? 0, 730, 520), display: false)
     }
     
     func windowShouldClose(_ sender: NSWindow) -> Bool {
