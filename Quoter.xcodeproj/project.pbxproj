@@ -28,6 +28,8 @@
 		98671008230FF37800612EBA /* ItemPresetPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */; };
 		9867100B2310A36600612EBA /* QuoteExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986710092310A36600612EBA /* QuoteExportViewController.swift */; };
 		9867100C2310A36600612EBA /* QuoteExportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9867100A2310A36600612EBA /* QuoteExportViewController.xib */; };
+		98767D702411C54900FFDB86 /* PreferencesChargesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98767D6F2411C54900FFDB86 /* PreferencesChargesViewController.swift */; };
+		98767D722411C7F600FFDB86 /* PreferencesPaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98767D712411C7F600FFDB86 /* PreferencesPaperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		98671006230FF37800612EBA /* ItemPresetPreferencesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemPresetPreferencesViewController.xib; sourceTree = "<group>"; };
 		986710092310A36600612EBA /* QuoteExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteExportViewController.swift; sourceTree = "<group>"; };
 		9867100A2310A36600612EBA /* QuoteExportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteExportViewController.xib; sourceTree = "<group>"; };
+		98767D6F2411C54900FFDB86 /* PreferencesChargesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesChargesViewController.swift; sourceTree = "<group>"; };
+		98767D712411C7F600FFDB86 /* PreferencesPaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesPaperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				98494AF1240F8999006BDD84 /* Prefrerences.storyboard */,
+				98767D712411C7F600FFDB86 /* PreferencesPaperViewController.swift */,
+				98767D6F2411C54900FFDB86 /* PreferencesChargesViewController.swift */,
 				98494AF3240F8F98006BDD84 /* PreferencesViewController.swift */,
 				98494AF5240F9016006BDD84 /* PreferencesWindowController.swift */,
 			);
@@ -320,6 +326,7 @@
 				981CF8D823C02A1600F95D2A /* QuoteItem.swift in Sources */,
 				98631FFC236F959500F330E3 /* Quote.xcdatamodeld in Sources */,
 				98670FAC230A480A00612EBA /* QuoteWindowController.swift in Sources */,
+				98767D722411C7F600FFDB86 /* PreferencesPaperViewController.swift in Sources */,
 				98670FFD230BE3AB00612EBA /* QuoteItemCellView.swift in Sources */,
 				98494AF6240F9016006BDD84 /* PreferencesWindowController.swift in Sources */,
 				98671007230FF37800612EBA /* ItemPresetPreferencesViewController.swift in Sources */,
@@ -328,6 +335,7 @@
 				98494AF4240F8F98006BDD84 /* PreferencesViewController.swift in Sources */,
 				98670F7A2309049D00612EBA /* AppDelegate.swift in Sources */,
 				9867100B2310A36600612EBA /* QuoteExportViewController.swift in Sources */,
+				98767D702411C54900FFDB86 /* PreferencesChargesViewController.swift in Sources */,
 				98631F50236F815500F330E3 /* QuoteListViewController.swift in Sources */,
 				98670FB3230A51DB00612EBA /* BasicItemViewController.swift in Sources */,
 			);

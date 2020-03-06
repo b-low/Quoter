@@ -13,7 +13,7 @@ class PreferencesWindowController: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
     
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+        window?.setFrame(NSMakeRect(window?.frame.origin.x ?? 0, window?.frame.origin.y ?? 0, 730, 300), display: false)
     }
     
     func windowShouldClose(_ sender: NSWindow) -> Bool {
