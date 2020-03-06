@@ -13,14 +13,9 @@ class PreferencesPaperViewController: NSTabViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        preferredContentSize = view.fittingSize
+        // Automatic resize based on tab selected
+        // preferredContentSize = view.fittingSize
     }
-    
-// Automatic resize based on tab selected
-//    override func viewWillAppear() {
-//        super.viewWillAppear()
-//        preferredContentSize = view.fittingSize
-//    }
     
     override func viewDidAppear() {
         super.viewDidAppear()

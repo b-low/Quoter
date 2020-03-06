@@ -39,7 +39,7 @@ class Quote: NSDocument {
         // DEBUG
         Swift.print("mwc")
         for item in quoteData.quoteItems {
-            Swift.print("\(item.name): \(item.subtotal)")
+            Swift.print("\(item.name): \(Float(item.subtotal) / 100)")
         }
         
         addWindowController(windowController)

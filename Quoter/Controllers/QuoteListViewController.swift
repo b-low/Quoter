@@ -65,7 +65,8 @@ extension QuoteListViewController: NSTableViewDelegate {
         
         let item = (representedObject as! QuoteData).quoteItems[row]
         cell.textField?.stringValue = item.name
-        cell.subtotalField.stringValue = "\(item.subtotal)"
+        // cell.subtotalField.stringValue = "\(item.subtotal)"
+        cell.subtotalField.stringValue = String(format: "%.02f", (Float(item.subtotal) / 100))
 
         return cell
     }
