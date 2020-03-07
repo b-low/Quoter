@@ -9,7 +9,10 @@
         <customObject id="-2" userLabel="File's Owner" customClass="QuoteListViewController" customModule="Quoter" customModuleProvider="target">
             <connections>
                 <outlet property="arrayController" destination="gPK-P5-sF9" id="F9G-70-EGv"/>
+                <outlet property="subtotal" destination="oI0-m7-nmX" id="mxh-1c-5if"/>
                 <outlet property="tableView" destination="SE5-ph-gAs" id="mEB-V5-n3z"/>
+                <outlet property="tax" destination="vU0-FH-GBL" id="B0K-QC-n5d"/>
+                <outlet property="total" destination="Z04-tY-2qV" id="Yzb-3E-Jmw"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -26,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="SE5-ph-gAs">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="247"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="187"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -89,7 +92,7 @@
                             </tableView>
                         </subviews>
                         <nil key="backgroundColor"/>
-                        <edgeInsets key="contentInsets" left="0.0" right="0.0" top="24" bottom="0.0"/>
+                        <edgeInsets key="contentInsets" left="0.0" right="0.0" top="24" bottom="60"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="BYh-tE-HLH">
                         <rect key="frame" x="0.0" y="255" width="400" height="16"/>
@@ -100,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="withinWindow" material="headerView" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-qq-sph">
+                <visualEffectView blendingMode="withinWindow" material="headerView" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-qq-sph">
                     <rect key="frame" x="0.0" y="247" width="400" height="24"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9sS-EL-aS6">
@@ -127,13 +130,117 @@
                         <constraint firstItem="4Yt-7G-fSy" firstAttribute="centerY" secondItem="TI9-qq-sph" secondAttribute="centerY" id="ubn-xt-LZm"/>
                     </constraints>
                 </visualEffectView>
+                <visualEffectView blendingMode="withinWindow" material="headerView" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="NX2-Nt-vPD">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="90"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="TEA-Nz-Nwx" userLabel="Total">
+                            <rect key="frame" x="10" y="10" width="380" height="22"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yhg-Tz-hv9" userLabel="Label">
+                                    <rect key="frame" x="229" y="-3" width="62" height="28"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Total:" id="JhS-XI-KDN">
+                                        <font key="font" metaFont="systemMedium" size="24"/>
+                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z04-tY-2qV" userLabel="Price">
+                                    <rect key="frame" x="295" y="-3" width="87" height="28"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="emd-Jc-tYf">
+                                        <font key="font" metaFont="systemMedium" size="24"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Z04-tY-2qV" firstAttribute="firstBaseline" secondItem="Yhg-Tz-hv9" secondAttribute="firstBaseline" id="0jF-Sy-94m"/>
+                                <constraint firstItem="Z04-tY-2qV" firstAttribute="leading" secondItem="Yhg-Tz-hv9" secondAttribute="trailing" constant="8" id="cLF-Vo-sKj"/>
+                                <constraint firstItem="Z04-tY-2qV" firstAttribute="centerY" secondItem="TEA-Nz-Nwx" secondAttribute="centerY" id="d8X-TQ-NPg"/>
+                                <constraint firstAttribute="trailing" secondItem="Z04-tY-2qV" secondAttribute="trailing" id="f6E-rQ-PQ0"/>
+                                <constraint firstAttribute="height" constant="22" id="sba-Yd-CZ3"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="mGz-fm-4bS" userLabel="Subtotal">
+                            <rect key="frame" x="10" y="62" width="380" height="22"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1o8-gT-shJ" userLabel="Label">
+                                    <rect key="frame" x="272" y="3" width="61" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Subtotal:" id="PSC-tr-vP2">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oI0-m7-nmX" userLabel="Price">
+                                    <rect key="frame" x="333" y="3" width="49" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="I5g-gy-Bv3">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="oI0-m7-nmX" firstAttribute="firstBaseline" secondItem="1o8-gT-shJ" secondAttribute="firstBaseline" id="3nv-fl-d6V"/>
+                                <constraint firstAttribute="trailing" secondItem="oI0-m7-nmX" secondAttribute="trailing" id="83b-WB-iSA"/>
+                                <constraint firstItem="oI0-m7-nmX" firstAttribute="leading" secondItem="1o8-gT-shJ" secondAttribute="trailing" constant="4" id="M0m-mR-zZ7"/>
+                                <constraint firstAttribute="height" constant="22" id="mEo-hS-r3W"/>
+                                <constraint firstItem="oI0-m7-nmX" firstAttribute="centerY" secondItem="mGz-fm-4bS" secondAttribute="centerY" id="tUf-Q6-tOg"/>
+                            </constraints>
+                        </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="7cO-6A-pqB" userLabel="Tax">
+                            <rect key="frame" x="10" y="40" width="380" height="22"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ChM-xC-sBa" userLabel="Label">
+                                    <rect key="frame" x="303" y="3" width="30" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Tax:" id="Tkv-CL-Qf2">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vU0-FH-GBL" userLabel="Price">
+                                    <rect key="frame" x="333" y="3" width="49" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="9qL-48-HHS">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="3EI-0p-neg"/>
+                                <constraint firstItem="vU0-FH-GBL" firstAttribute="centerY" secondItem="7cO-6A-pqB" secondAttribute="centerY" id="MHm-IA-Yks"/>
+                                <constraint firstItem="vU0-FH-GBL" firstAttribute="leading" secondItem="ChM-xC-sBa" secondAttribute="trailing" constant="4" id="XCc-M4-2IH"/>
+                                <constraint firstAttribute="trailing" secondItem="vU0-FH-GBL" secondAttribute="trailing" id="XRL-nG-8jf"/>
+                                <constraint firstItem="vU0-FH-GBL" firstAttribute="firstBaseline" secondItem="ChM-xC-sBa" secondAttribute="firstBaseline" id="v26-Ha-88O"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="7cO-6A-pqB" firstAttribute="top" secondItem="mGz-fm-4bS" secondAttribute="bottom" id="AUL-EM-WvM"/>
+                        <constraint firstAttribute="trailing" secondItem="7cO-6A-pqB" secondAttribute="trailing" constant="10" id="BHy-ds-luY"/>
+                        <constraint firstAttribute="trailing" secondItem="mGz-fm-4bS" secondAttribute="trailing" constant="10" id="BjH-eu-QmX"/>
+                        <constraint firstItem="7cO-6A-pqB" firstAttribute="leading" secondItem="NX2-Nt-vPD" secondAttribute="leading" constant="10" id="Ebd-CA-3bJ"/>
+                        <constraint firstItem="TEA-Nz-Nwx" firstAttribute="top" secondItem="7cO-6A-pqB" secondAttribute="bottom" constant="8" id="XLS-0h-ToY"/>
+                        <constraint firstItem="mGz-fm-4bS" firstAttribute="leading" secondItem="NX2-Nt-vPD" secondAttribute="leading" constant="10" id="kLU-Sz-QF5"/>
+                        <constraint firstAttribute="height" constant="90" id="oe7-YN-cdT"/>
+                        <constraint firstItem="TEA-Nz-Nwx" firstAttribute="leading" secondItem="NX2-Nt-vPD" secondAttribute="leading" constant="10" id="rTc-La-kc1"/>
+                        <constraint firstAttribute="bottom" secondItem="TEA-Nz-Nwx" secondAttribute="bottom" constant="10" id="siP-bH-mZT"/>
+                        <constraint firstAttribute="trailing" secondItem="TEA-Nz-Nwx" secondAttribute="trailing" constant="10" id="u7H-DT-0LD"/>
+                    </constraints>
+                </visualEffectView>
             </subviews>
             <constraints>
                 <constraint firstItem="zPl-sV-r6s" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="0h5-WX-RNE"/>
+                <constraint firstAttribute="trailing" secondItem="NX2-Nt-vPD" secondAttribute="trailing" id="1cf-Bo-kpL"/>
+                <constraint firstAttribute="bottom" secondItem="NX2-Nt-vPD" secondAttribute="bottom" id="7f2-nC-T6o"/>
                 <constraint firstAttribute="trailing" secondItem="TI9-qq-sph" secondAttribute="trailing" id="Ard-z4-grd"/>
                 <constraint firstItem="TI9-qq-sph" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="O9j-Gw-dvT"/>
                 <constraint firstAttribute="trailing" secondItem="TI9-qq-sph" secondAttribute="trailing" id="T1K-4k-mHG"/>
                 <constraint firstItem="zPl-sV-r6s" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="X36-kf-SX2"/>
+                <constraint firstItem="NX2-Nt-vPD" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Y8X-2e-ZPa"/>
                 <constraint firstAttribute="trailing" secondItem="zPl-sV-r6s" secondAttribute="trailing" id="Yik-w5-Kun"/>
                 <constraint firstItem="TI9-qq-sph" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="lua-2J-Yad"/>
                 <constraint firstAttribute="bottom" secondItem="zPl-sV-r6s" secondAttribute="bottom" id="oEg-Ow-VFR"/>
@@ -246,7 +353,7 @@ DQ
                     <rect key="frame" x="143" y="178" width="93" height="11"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Long-time customer" id="RMy-Jo-aXB">
-                        <font key="font" metaFont="menu" size="9"/>
+                        <font key="font" metaFont="label" size="9"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -282,7 +389,7 @@ DQ
                     <rect key="frame" x="143" y="139" width="43" height="11"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Rush job" id="OqW-Iz-qXa">
-                        <font key="font" metaFont="menu" size="9"/>
+                        <font key="font" metaFont="label" size="9"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>

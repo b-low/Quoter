@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +21,7 @@
                     <rect key="frame" x="20" y="41" width="600" height="808"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w5r-47-nXL">
-                            <rect key="frame" x="-2" y="791" width="133" height="17"/>
+                            <rect key="frame" x="-2" y="792" width="133" height="16"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="Basic finished piece" id="Y1i-z7-4QM">
                                 <font key="font" metaFont="systemBold"/>
                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -28,7 +29,7 @@
                             </textFieldCell>
                         </textField>
                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nud-0h-EDw" userLabel="Title">
-                            <rect key="frame" x="-2" y="744" width="604" height="39"/>
+                            <rect key="frame" x="-2" y="746" width="604" height="38"/>
                             <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" alignment="left" placeholderString="Item Title" usesSingleLineMode="YES" id="QQU-fC-OKW">
                                 <font key="font" metaFont="system" size="32"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -36,7 +37,7 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0sW-aS-Ckc">
-                            <rect key="frame" x="-2" y="693" width="60" height="19"/>
+                            <rect key="frame" x="-2" y="695" width="60" height="19"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="Printing" id="6h6-iL-eNz">
                                 <font key="font" metaFont="system" size="16"/>
                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -44,10 +45,10 @@
                             </textFieldCell>
                         </textField>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="NE3-hq-IEH" userLabel="Order details container">
-                            <rect key="frame" x="0.0" y="561" width="220" height="120"/>
+                            <rect key="frame" x="0.0" y="563" width="220" height="120"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CLO-2y-K7a">
-                                    <rect key="frame" x="69" y="103" width="83" height="17"/>
+                                    <rect key="frame" x="69" y="104" width="83" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Order details" id="8hk-JL-M5G">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -55,10 +56,10 @@
                                     </textFieldCell>
                                 </textField>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="BtB-L8-sBd" userLabel="Piece width">
-                                    <rect key="frame" x="0.0" y="67" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="68" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9rR-LU-zGU">
-                                            <rect key="frame" x="63" y="8" width="45" height="17"/>
+                                            <rect key="frame" x="63" y="8" width="45" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Width:" id="daw-Hq-lbF">
                                                 <font key="font" metaFont="systemMedium" size="13"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -66,7 +67,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Qs-GP-ujV">
-                                            <rect key="frame" x="114" y="5" width="80" height="23"/>
+                                            <rect key="frame" x="114" y="5" width="80" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="nvy-GO-sw3"/>
                                             </constraints>
@@ -78,7 +79,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mq5-vM-vXA">
-                                            <rect key="frame" x="196" y="8" width="15" height="17"/>
+                                            <rect key="frame" x="196" y="8" width="15" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="in" id="S8l-Ta-OCM">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -99,10 +100,10 @@
                                     </constraints>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="h8n-LT-J9F" userLabel="Piece height">
-                                    <rect key="frame" x="0.0" y="35" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="36" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gzw-Vq-Ta9">
-                                            <rect key="frame" x="60" y="8" width="48" height="17"/>
+                                            <rect key="frame" x="60" y="8" width="48" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Height:" id="Wdz-0K-1WR">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -110,7 +111,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="auf-IV-7x1">
-                                            <rect key="frame" x="114" y="5" width="80" height="23"/>
+                                            <rect key="frame" x="114" y="5" width="80" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="qbf-Qx-GRP"/>
                                             </constraints>
@@ -122,7 +123,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IOt-TX-Dbg">
-                                            <rect key="frame" x="196" y="8" width="15" height="17"/>
+                                            <rect key="frame" x="196" y="8" width="15" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="in" id="kKK-dN-zUk">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -143,10 +144,10 @@
                                     </constraints>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-dg-gKH" userLabel="Quantity">
-                                    <rect key="frame" x="0.0" y="3" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="4" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="huA-6N-8We">
-                                            <rect key="frame" x="48" y="8" width="60" height="17"/>
+                                            <rect key="frame" x="48" y="8" width="60" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Quantity:" id="FFI-2e-yJe">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -154,7 +155,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nkJ-WB-Bvk">
-                                            <rect key="frame" x="114" y="5" width="80" height="23"/>
+                                            <rect key="frame" x="114" y="5" width="80" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="GRe-WQ-wOv"/>
                                             </constraints>
@@ -194,10 +195,10 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="5QB-xb-xUu" userLabel="Paper details container">
-                            <rect key="frame" x="250" y="465" width="350" height="216"/>
+                            <rect key="frame" x="250" y="467" width="350" height="216"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mn6-cF-M52">
-                                    <rect key="frame" x="134" y="199" width="83" height="17"/>
+                                    <rect key="frame" x="134" y="200" width="83" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Paper details" id="7HB-Mb-lZu">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -205,20 +206,20 @@
                                     </textFieldCell>
                                 </textField>
                                 <button hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OKh-mP-sGL">
-                                    <rect key="frame" x="107" y="167" width="136" height="32"/>
+                                    <rect key="frame" x="107" y="168" width="136" height="32"/>
                                     <buttonCell key="cell" type="push" title="Choose paper..." bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sFQ-IY-Zhu">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
                                 </button>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="HfD-xq-FAt" userLabel="Summary container">
-                                    <rect key="frame" x="0.0" y="45" width="350" height="150"/>
+                                    <rect key="frame" x="0.0" y="46" width="350" height="150"/>
                                     <subviews>
                                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="3Co-Gz-xnL" userLabel="Paper size">
                                             <rect key="frame" x="0.0" y="118" width="350" height="32"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uNy-LV-DIA">
-                                                    <rect key="frame" x="29" y="8" width="73" height="17"/>
+                                                    <rect key="frame" x="29" y="8" width="73" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Paper size:" id="Zkx-Pq-Dqw">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -226,7 +227,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGL-so-wbd">
-                                                    <rect key="frame" x="108" y="8" width="42" height="17"/>
+                                                    <rect key="frame" x="108" y="8" width="42" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="left" title="8.5x11" id="fe4-5j-P8b">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -246,7 +247,7 @@
                                             <rect key="frame" x="0.0" y="86" width="350" height="32"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1KA-Au-Iis">
-                                                    <rect key="frame" x="26" y="8" width="76" height="17"/>
+                                                    <rect key="frame" x="26" y="8" width="76" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Paper type:" id="pZ3-qm-KxB" userLabel="Paper type">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -254,7 +255,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B92-tC-StJ">
-                                                    <rect key="frame" x="108" y="8" width="170" height="17"/>
+                                                    <rect key="frame" x="108" y="8" width="170" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="left" title="Pacesetter 80# cover gloss" id="64J-yc-J88">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -277,7 +278,7 @@
                                             <rect key="frame" x="0.0" y="41" width="350" height="32"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PD3-PX-QZO">
-                                                    <rect key="frame" x="21" y="8" width="81" height="17"/>
+                                                    <rect key="frame" x="21" y="8" width="81" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Number up::" id="r5e-pI-ScR" userLabel="Paper type">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -285,7 +286,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DPX-y9-xFA">
-                                                    <rect key="frame" x="108" y="8" width="13" height="17"/>
+                                                    <rect key="frame" x="108" y="8" width="13" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="left" title="8" id="iUx-ST-PL4">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -305,7 +306,7 @@
                                             <rect key="frame" x="0.0" y="9" width="350" height="32"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t8Y-uc-amQ">
-                                                    <rect key="frame" x="51" y="8" width="51" height="17"/>
+                                                    <rect key="frame" x="51" y="8" width="51" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Sheets:" id="8Ub-Ha-cbY" userLabel="Paper type">
                                                         <font key="font" metaFont="systemMedium" size="13"/>
                                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -313,7 +314,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kVV-bC-AZu">
-                                                    <rect key="frame" x="108" y="8" width="29" height="17"/>
+                                                    <rect key="frame" x="108" y="8" width="29" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="left" title="500" id="PGj-Ax-bhi">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -363,10 +364,10 @@
                             </constraints>
                         </customView>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="7eZ-Ls-5hU">
-                            <rect key="frame" x="20" y="374" width="560" height="5"/>
+                            <rect key="frame" x="20" y="376" width="560" height="5"/>
                         </box>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XHc-K8-Z0r">
-                            <rect key="frame" x="-2" y="337" width="144" height="19"/>
+                            <rect key="frame" x="-2" y="339" width="144" height="19"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="Setup and finishing" id="iIS-ON-Xpk">
                                 <font key="font" metaFont="system" size="16"/>
                                 <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -374,7 +375,7 @@
                             </textFieldCell>
                         </textField>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="jcw-AI-XBI" userLabel="Price table">
-                            <rect key="frame" x="0.0" y="125" width="600" height="200"/>
+                            <rect key="frame" x="0.0" y="127" width="600" height="200"/>
                             <subviews>
                                 <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-Eh-IBn">
                                     <rect key="frame" x="0.0" y="24" width="600" height="176"/>
@@ -384,14 +385,14 @@
                                         <subviews>
                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Xn2-YO-tZQ" viewBased="YES" id="9S6-P8-885">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="151"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                 <tableColumns>
                                                     <tableColumn editable="NO" width="116" minWidth="40" maxWidth="1000" id="Wvv-gC-kua">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -424,7 +425,7 @@
                                                     </tableColumn>
                                                     <tableColumn editable="NO" width="116" minWidth="40" maxWidth="1000" id="fCG-oN-nXG">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Type">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -457,7 +458,7 @@
                                                     </tableColumn>
                                                     <tableColumn editable="NO" width="359" minWidth="10" maxWidth="3.4028234663852886e+38" id="mN5-WO-dvn">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Amount">
-                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <font key="font" metaFont="menu" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -517,7 +518,7 @@
                                             </buttonCell>
                                         </button>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-12-cFc">
-                                            <rect key="frame" x="21" y="3" width="11" height="15"/>
+                                            <rect key="frame" x="21" y="3" width="11" height="14"/>
                                             <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" imageScaling="proportionallyDown" inset="2" id="63m-HE-Tua">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
@@ -545,10 +546,10 @@
                             </constraints>
                         </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="ads-ug-Dgj" userLabel="Printing cost">
-                            <rect key="frame" x="0.0" y="62" width="600" height="22"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="22"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7lE-nq-4E3" userLabel="Label">
-                                    <rect key="frame" x="496" y="3" width="57" height="17"/>
+                                    <rect key="frame" x="496" y="3" width="57" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Printing:" id="wsM-pN-xtl">
                                         <font key="font" metaFont="systemMedium" size="13"/>
                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -556,7 +557,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-Kv-uui" userLabel="Price">
-                                    <rect key="frame" x="553" y="3" width="49" height="17"/>
+                                    <rect key="frame" x="553" y="3" width="49" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="Npp-gf-Vvo">
                                         <font key="font" metaFont="systemMedium" size="13"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -572,11 +573,39 @@
                                 <constraint firstItem="lOJ-Kv-uui" firstAttribute="firstBaseline" secondItem="7lE-nq-4E3" secondAttribute="firstBaseline" id="uag-8P-Urg"/>
                             </constraints>
                         </customView>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="PqU-dW-ZgD" userLabel="Setup and finishing costs">
+                            <rect key="frame" x="0.0" y="42" width="600" height="22"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aYS-Wx-eWD" userLabel="Label">
+                                    <rect key="frame" x="425" y="3" width="128" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Setup and finishing:" id="t93-4s-9F8">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-bB-Gs0" userLabel="Price">
+                                    <rect key="frame" x="553" y="3" width="49" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="tzi-A7-xUy">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="centerY" secondItem="PqU-dW-ZgD" secondAttribute="centerY" id="7SG-zA-I9g"/>
+                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="leading" secondItem="aYS-Wx-eWD" secondAttribute="trailing" constant="4" id="Dsb-Tz-pRb"/>
+                                <constraint firstAttribute="height" constant="22" id="M4T-YO-aei"/>
+                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="firstBaseline" secondItem="aYS-Wx-eWD" secondAttribute="firstBaseline" id="uZB-To-ztz"/>
+                                <constraint firstAttribute="trailing" secondItem="dhk-bB-Gs0" secondAttribute="trailing" id="vcJ-hJ-YOi"/>
+                            </constraints>
+                        </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="2ob-kj-sr7" userLabel="Subtotal">
-                            <rect key="frame" x="0.0" y="10" width="600" height="22"/>
+                            <rect key="frame" x="0.0" y="12" width="600" height="22"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pFo-6S-usb" userLabel="Label">
-                                    <rect key="frame" x="410" y="-3" width="101" height="29"/>
+                                    <rect key="frame" x="410" y="-3" width="101" height="28"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Subtotal:" id="Jjw-hX-LRw">
                                         <font key="font" metaFont="systemMedium" size="24"/>
                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -584,7 +613,7 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dFo-bz-zUb" userLabel="Price">
-                                    <rect key="frame" x="515" y="-3" width="87" height="29"/>
+                                    <rect key="frame" x="515" y="-3" width="87" height="28"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="Gm6-yI-OnW">
                                         <font key="font" metaFont="systemMedium" size="24"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -601,41 +630,13 @@
                             </constraints>
                         </customView>
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="a8m-EA-ONR" userLabel="Horizontal Line 2">
-                            <rect key="frame" x="20" y="102" width="560" height="5"/>
+                            <rect key="frame" x="20" y="104" width="560" height="5"/>
                         </box>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="PqU-dW-ZgD" userLabel="Setup and finishing costs">
-                            <rect key="frame" x="0.0" y="40" width="600" height="22"/>
-                            <subviews>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aYS-Wx-eWD" userLabel="Label">
-                                    <rect key="frame" x="425" y="3" width="128" height="17"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Setup and finishing:" id="t93-4s-9F8">
-                                        <font key="font" metaFont="systemMedium" size="13"/>
-                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-bB-Gs0" userLabel="Price">
-                                    <rect key="frame" x="553" y="3" width="49" height="17"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="tzi-A7-xUy">
-                                        <font key="font" metaFont="systemMedium" size="13"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="centerY" secondItem="PqU-dW-ZgD" secondAttribute="centerY" id="7SG-zA-I9g"/>
-                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="leading" secondItem="aYS-Wx-eWD" secondAttribute="trailing" constant="4" id="Dsb-Tz-pRb"/>
-                                <constraint firstAttribute="height" constant="22" id="M4T-YO-aei"/>
-                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="firstBaseline" secondItem="aYS-Wx-eWD" secondAttribute="firstBaseline" id="uZB-To-ztz"/>
-                                <constraint firstAttribute="trailing" secondItem="dhk-bB-Gs0" secondAttribute="trailing" id="vcJ-hJ-YOi"/>
-                            </constraints>
-                        </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Xg8-lw-aza" userLabel="Printing details container">
-                            <rect key="frame" x="0.0" y="397" width="220" height="152"/>
+                            <rect key="frame" x="0.0" y="399" width="220" height="152"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tdd-Du-juk">
-                                    <rect key="frame" x="63" y="135" width="95" height="17"/>
+                                    <rect key="frame" x="63" y="136" width="95" height="16"/>
                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Printing details" id="17Z-gc-dge">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -643,10 +644,10 @@
                                     </textFieldCell>
                                 </textField>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="wRD-kL-bHZ" userLabel="Extra">
-                                    <rect key="frame" x="0.0" y="99" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="100" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GpN-Pa-1JB">
-                                            <rect key="frame" x="69" y="8" width="39" height="17"/>
+                                            <rect key="frame" x="69" y="8" width="39" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Extra:" id="QYF-Ak-IYK">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -654,7 +655,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Toe-aC-6P9">
-                                            <rect key="frame" x="114" y="5" width="80" height="23"/>
+                                            <rect key="frame" x="114" y="5" width="80" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="80" id="hnP-io-1nQ"/>
                                             </constraints>
@@ -666,7 +667,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nlO-wV-BQQ">
-                                            <rect key="frame" x="196" y="8" width="15" height="17"/>
+                                            <rect key="frame" x="196" y="8" width="15" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="%" id="CWb-fJ-s4C">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -687,10 +688,10 @@
                                     </constraints>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="ln3-D8-5In" userLabel="Bleed">
-                                    <rect key="frame" x="0.0" y="67" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="68" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jl0-nr-ljP">
-                                            <rect key="frame" x="65" y="8" width="43" height="17"/>
+                                            <rect key="frame" x="65" y="8" width="43" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Bleed:" id="wPf-kq-Ucr">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -704,7 +705,7 @@
                                             </constraints>
                                             <popUpButtonCell key="cell" type="push" title="0" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="Mqj-un-dTe" id="cb6-s2-dhb">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="system"/>
                                                 <menu key="menu" id="cnf-Ei-frQ">
                                                     <items>
                                                         <menuItem title="0" state="on" id="Mqj-un-dTe"/>
@@ -715,7 +716,7 @@
                                             </popUpButtonCell>
                                         </popUpButton>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pX3-oG-8X0">
-                                            <rect key="frame" x="196" y="8" width="15" height="17"/>
+                                            <rect key="frame" x="196" y="8" width="15" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="in" id="qer-Pd-UIT">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -734,10 +735,10 @@
                                     </constraints>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="tKd-hE-6XX" userLabel="Color">
-                                    <rect key="frame" x="0.0" y="35" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="36" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vQg-TL-cf2">
-                                            <rect key="frame" x="67" y="8" width="41" height="17"/>
+                                            <rect key="frame" x="67" y="8" width="41" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Color:" id="akd-Cn-c46">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -751,7 +752,7 @@
                                             </constraints>
                                             <popUpButtonCell key="cell" type="push" title="Color" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="EI5-Bb-V4I" id="gdc-u9-1eT">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="system"/>
                                                 <menu key="menu" id="SKP-gh-ET2">
                                                     <items>
                                                         <menuItem title="Color" state="on" id="EI5-Bb-V4I"/>
@@ -770,10 +771,10 @@
                                     </constraints>
                                 </customView>
                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="OZD-xm-b0t" userLabel="Duploability">
-                                    <rect key="frame" x="0.0" y="3" width="220" height="32"/>
+                                    <rect key="frame" x="0.0" y="4" width="220" height="32"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RJP-AG-1YZ">
-                                            <rect key="frame" x="28" y="8" width="80" height="17"/>
+                                            <rect key="frame" x="28" y="8" width="80" height="16"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Duploability:" id="cV1-Rj-Qcu">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

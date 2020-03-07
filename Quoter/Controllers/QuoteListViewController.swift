@@ -12,6 +12,9 @@ class QuoteListViewController: NSViewController {
     
     @IBOutlet var arrayController: NSArrayController!
     // @objc dynamic var items = [QuoteItem]()
+    @IBOutlet weak var subtotal: NSTextField!
+    @IBOutlet weak var tax: NSTextField!
+    @IBOutlet weak var total: NSTextField!
     
     @IBOutlet weak var tableView: NSTableView!
     
@@ -21,6 +24,15 @@ class QuoteListViewController: NSViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.target = self
+        
+        var subtotal = 0
+        for item in (representedObject as! QuoteData).quoteItems {
+            subtotal += item.subtotal
+        }
+        
+        self.subtotal.stringValue = String(format: "$%.02f", (Float(subtotal) / 100))
+        self.tax.stringValue = String(format: "$%.02f", (Float(subtotal) / 100) * 0.04)
+        self.total.stringValue = String(format: "$%.02f", (Float(subtotal) / 100) * 1.04)
         
 //        print("QLVC")
 //        for item in arrayController.arrangedObjects as! [QuoteItem] {
@@ -66,7 +78,7 @@ extension QuoteListViewController: NSTableViewDelegate {
         let item = (representedObject as! QuoteData).quoteItems[row]
         cell.textField?.stringValue = item.name
         // cell.subtotalField.stringValue = "\(item.subtotal)"
-        cell.subtotalField.stringValue = String(format: "%.02f", (Float(item.subtotal) / 100))
+        cell.subtotalField.stringValue = String(format: "$%.02f", (Float(item.subtotal) / 100))
 
         return cell
     }
