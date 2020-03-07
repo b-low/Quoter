@@ -392,7 +392,7 @@
                                                 <tableColumns>
                                                     <tableColumn editable="NO" width="116" minWidth="40" maxWidth="1000" id="Wvv-gC-kua">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -425,7 +425,7 @@
                                                     </tableColumn>
                                                     <tableColumn editable="NO" width="116" minWidth="40" maxWidth="1000" id="fCG-oN-nXG">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Type">
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                         </tableHeaderCell>
@@ -458,7 +458,7 @@
                                                     </tableColumn>
                                                     <tableColumn editable="NO" width="359" minWidth="10" maxWidth="3.4028234663852886e+38" id="mN5-WO-dvn">
                                                         <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Amount">
-                                                            <font key="font" metaFont="menu" size="11"/>
+                                                            <font key="font" metaFont="label" size="11"/>
                                                             <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </tableHeaderCell>
@@ -573,34 +573,6 @@
                                 <constraint firstItem="lOJ-Kv-uui" firstAttribute="firstBaseline" secondItem="7lE-nq-4E3" secondAttribute="firstBaseline" id="uag-8P-Urg"/>
                             </constraints>
                         </customView>
-                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="PqU-dW-ZgD" userLabel="Setup and finishing costs">
-                            <rect key="frame" x="0.0" y="42" width="600" height="22"/>
-                            <subviews>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aYS-Wx-eWD" userLabel="Label">
-                                    <rect key="frame" x="425" y="3" width="128" height="16"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Setup and finishing:" id="t93-4s-9F8">
-                                        <font key="font" metaFont="systemMedium" size="13"/>
-                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-bB-Gs0" userLabel="Price">
-                                    <rect key="frame" x="553" y="3" width="49" height="16"/>
-                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="tzi-A7-xUy">
-                                        <font key="font" metaFont="systemMedium" size="13"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                            </subviews>
-                            <constraints>
-                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="centerY" secondItem="PqU-dW-ZgD" secondAttribute="centerY" id="7SG-zA-I9g"/>
-                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="leading" secondItem="aYS-Wx-eWD" secondAttribute="trailing" constant="4" id="Dsb-Tz-pRb"/>
-                                <constraint firstAttribute="height" constant="22" id="M4T-YO-aei"/>
-                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="firstBaseline" secondItem="aYS-Wx-eWD" secondAttribute="firstBaseline" id="uZB-To-ztz"/>
-                                <constraint firstAttribute="trailing" secondItem="dhk-bB-Gs0" secondAttribute="trailing" id="vcJ-hJ-YOi"/>
-                            </constraints>
-                        </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="2ob-kj-sr7" userLabel="Subtotal">
                             <rect key="frame" x="0.0" y="12" width="600" height="22"/>
                             <subviews>
@@ -632,6 +604,34 @@
                         <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="a8m-EA-ONR" userLabel="Horizontal Line 2">
                             <rect key="frame" x="20" y="104" width="560" height="5"/>
                         </box>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="PqU-dW-ZgD" userLabel="Setup and finishing costs">
+                            <rect key="frame" x="0.0" y="42" width="600" height="22"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aYS-Wx-eWD" userLabel="Label">
+                                    <rect key="frame" x="425" y="3" width="128" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Setup and finishing:" id="t93-4s-9F8">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-bB-Gs0" userLabel="Price">
+                                    <rect key="frame" x="553" y="3" width="49" height="16"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="right" title="$00.00" id="tzi-A7-xUy">
+                                        <font key="font" metaFont="systemMedium" size="13"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="centerY" secondItem="PqU-dW-ZgD" secondAttribute="centerY" id="7SG-zA-I9g"/>
+                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="leading" secondItem="aYS-Wx-eWD" secondAttribute="trailing" constant="4" id="Dsb-Tz-pRb"/>
+                                <constraint firstAttribute="height" constant="22" id="M4T-YO-aei"/>
+                                <constraint firstItem="dhk-bB-Gs0" firstAttribute="firstBaseline" secondItem="aYS-Wx-eWD" secondAttribute="firstBaseline" id="uZB-To-ztz"/>
+                                <constraint firstAttribute="trailing" secondItem="dhk-bB-Gs0" secondAttribute="trailing" id="vcJ-hJ-YOi"/>
+                            </constraints>
+                        </customView>
                         <customView translatesAutoresizingMaskIntoConstraints="NO" id="Xg8-lw-aza" userLabel="Printing details container">
                             <rect key="frame" x="0.0" y="399" width="220" height="152"/>
                             <subviews>
